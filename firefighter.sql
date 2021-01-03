@@ -24,10 +24,10 @@ INSERT INTO User(username, email, password, birthdate, score, level)  VALUES ('K
 
 CREATE TABLE Partida
 ( id  INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL, 
-fechaInicio DATE NOT NULL,
-horaInicio TIME ,
-fechaFin DATE NOT NULL, 
-horaFin TIME , 
+fechaInicio TEXT NOT NULL,
+horaInicio TEXT ,
+fechaFin TEXT NOT NULL, 
+horaFin TEXT , 
 score_partida INTEGER 
 )ENGINE = InnoDB;
 
