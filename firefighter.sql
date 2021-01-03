@@ -2,7 +2,7 @@ DROP DATABASE IF EXISTS dsaBBDD;
 CREATE DATABASE dsaBBDD; 
 USE dsaBBDD; 
 
-CREATE TABLE User 
+CREATE TABLE User
 ( id  INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL, 
 username TEXT NOT NULL,
 email TEXT NOT NULL, 
@@ -40,59 +40,63 @@ INSERT INTO Partida(fechaInicio, horaInicio, fechaFin, horaFin, score_partida)  
 INSERT INTO Partida(fechaInicio, horaInicio, fechaFin, horaFin, score_partida)  VALUES ('15-12-20','15:00','15-12-20','19:00',500);
 INSERT INTO Partida(fechaInicio, horaInicio, fechaFin, horaFin, score_partida)  VALUES ('14-12-20','12:00','14-12-20','13:00',600);
 
-CREATE TABLE UserPartida			
+CREATE TABLE UsersPartidas			
 (id_player INTEGER,
  id_game INTEGER,
  FOREIGN KEY (id_player) REFERENCES User (id),
  FOREIGN KEY (id_game) REFERENCES Partida (id)
 ) ENGINE = InnoDB;
 
-INSERT INTO UserPartida VALUES (1,1); 
-INSERT INTO UserPartida VALUES (2,2); 
-INSERT INTO UserPartida VALUES (3,3); 
-INSERT INTO UserPartida VALUES (4,4); 
-INSERT INTO UserPartida VALUES (5,5); 
-INSERT INTO UserPartida VALUES (6,6); 
-INSERT INTO UserPartida VALUES (7,7); 
-INSERT INTO UserPartida VALUES (8,8); 
+INSERT INTO UsersPartidas VALUES (1,1); 
+INSERT INTO UsersPartidas VALUES (2,2); 
+INSERT INTO UsersPartidas VALUES (2,3); 
+INSERT INTO UsersPartidas VALUES (4,4); 
+INSERT INTO UsersPartidas VALUES (5,5); 
+INSERT INTO UsersPartidas VALUES (6,6); 
+INSERT INTO UsersPartidas VALUES (7,7); 
+INSERT INTO UsersPartidas VALUES (8,8); 
+
 
 CREATE TABLE Orders
-(id INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL, 
-fecha DATE NOT NULL,
-hora TIME
+( id  INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL, 
+data TEXT NOT NULL,
+time TEXT NOT NULL,
+price INTEGER
 )ENGINE = InnoDB;
 
-INSERT INTO Orders(fecha, hora) VALUES ('6-2-20','11:00'); 
-INSERT INTO Orders(fecha, hora) VALUES ('5-6-20','4:00');
-INSERT INTO Orders(fecha, hora) VALUES ('9-7-20','21:00');
-INSERT INTO Orders(fecha, hora) VALUES ('7-10-20','22:00');
-INSERT INTO Orders(fecha, hora) VALUES ('4-3-20','6:00');
-INSERT INTO Orders(fecha, hora) VALUES ('8-11-20','9:00');
-INSERT INTO Orders(fecha, hora) VALUES ('5-10-20','15:00');
-INSERT INTO Orders(fecha, hora) VALUES ('4-12-20','12:00');
+INSERT INTO Orders(data, time , price) VALUES ('17-10-20','2:23',20); 
+INSERT INTO Orders(data, time , price) VALUES ('27-10-20','16:21',50); 
+INSERT INTO Orders(data, time , price) VALUES ('07-11-20','14:23',60); 
+INSERT INTO Orders(data, time , price) VALUES ('26-11-20','19:46',10);
+INSERT INTO Orders(data, time , price) VALUES ('23-12-20','18:36',100); 
+INSERT INTO Orders(data, time , price) VALUES ('28-12-20','06:43',600);
 
-CREATE TABLE Products
-(id INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL, 
+
+CREATE TABLE Items
+( id  INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL, 
 name TEXT NOT NULL,
-description TEXT NOT NULL
+description TEXT,
+price INTEGER 
 )ENGINE = InnoDB;
 
-INSERT INTO Products(name, description) VALUES ('AloeVera','Cura heridas'); 
-INSERT INTO Products(name, description) VALUES ('Extintor','Apaga fuegos a 2 pixels de distancia'); 
-INSERT INTO Products(name, description) VALUES ('Manguera','Apaga fuegos a 3 pixels de distancia'); 
-INSERT INTO Products(name, description) VALUES ('Moneda','testing'); 
-INSERT INTO Products(name, description) VALUES ('Diamante','2testing'); 
+INSERT INTO Items(name, description, price)  VALUES ('Aloe vera' ,'Cura tus quemaduras',5); 
+INSERT INTO Items(name, description, price)  VALUES ('Hacha' ,'Mata a tus enemigos de un golpe',150); 
+INSERT INTO Items(name, description, price)  VALUES ('Desparalizante' ,'Librate de la paralisis',10); 
+INSERT INTO Items(name, description, price)  VALUES ('Cuerda huida' ,'Vuelve al punto de inicio',10); 
+INSERT INTO Items(name, description, price)  VALUES ('Casco invisible' ,'Hazte invisible 30s',100); 
+INSERT INTO Items(name, description, price)  VALUES ('Pastilla magica' ,'Aumenta la capacidad de vida',75); 
 
-CREATE TABLE ProductOrder		
-(orderID INTEGER,
- productID INTEGER,
- FOREIGN KEY (orderID) REFERENCES Orders (id),
- FOREIGN KEY (productID) REFERENCES Products (id)
+
+CREATE TABLE OrdersItems	
+(id_order INTEGER,
+ id_item INTEGER,
+ FOREIGN KEY (id_order) REFERENCES Orders (id),
+ FOREIGN KEY (id_item) REFERENCES Items (id)
 ) ENGINE = InnoDB;
 
-INSERT INTO ProductOrder VALUES (1,1); 
-INSERT INTO ProductOrder VALUES (2,1);
-INSERT INTO ProductOrder VALUES (3,2);
-INSERT INTO ProductOrder VALUES (4,2);
-INSERT INTO ProductOrder VALUES (5,3);
-INSERT INTO ProductOrder VALUES (6,4);
+INSERT INTO OrdersItems VALUES (1,6); 
+INSERT INTO OrdersItems VALUES (2,5); 
+INSERT INTO OrdersItems VALUES (3,4); 
+INSERT INTO OrdersItems VALUES (4,3); 
+INSERT INTO OrdersItems VALUES (5,2); 
+INSERT INTO OrdersItems VALUES (6,1); 
