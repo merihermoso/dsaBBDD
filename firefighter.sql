@@ -22,7 +22,7 @@ INSERT INTO User(username, email, password, birthdate, score, level)  VALUES ('S
 INSERT INTO User(username, email, password, birthdate, score, level)  VALUES ('Kei8','kei@gmail.com','Keicontra', '27/12/1998', 0, 1); 
 
 
-CREATE TABLE Partidas
+CREATE TABLE Partida
 ( id  INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL, 
 fechaInicio TEXT NOT NULL,
 horaInicio TEXT ,
@@ -31,30 +31,30 @@ horaFin TEXT ,
 score_partida INTEGER 
 )ENGINE = InnoDB;
 
-INSERT INTO Partidas(fechaInicio, horaInicio, fechaFin, horaFin, score_partida)  VALUES ('14-12-20','11:00','14-12-20','11:30',600); 
-INSERT INTO Partidas(fechaInicio, horaInicio, fechaFin, horaFin, score_partida)  VALUES ('15-12-20','4:00','15-12-20','4:45',300);
-INSERT INTO Partidas(fechaInicio, horaInicio, fechaFin, horaFin, score_partida)  VALUES ('14-12-20','21:00','14-12-20','22:00',500);
-INSERT INTO Partidas(fechaInicio, horaInicio, fechaFin, horaFin, score_partida)  VALUES ('14-12-20','22:00','14-12-20','23:30',700);
-INSERT INTO Partidas(fechaInicio, horaInicio, fechaFin, horaFin, score_partida)  VALUES ('14-12-20','6:00','14-12-20','9:00',100);
-INSERT INTO Partidas(fechaInicio, horaInicio, fechaFin, horaFin, score_partida)  VALUES ('14-12-20','9:00','14-12-20','19:00',200);
-INSERT INTO Partidas(fechaInicio, horaInicio, fechaFin, horaFin, score_partida)  VALUES ('15-12-20','15:00','15-12-20','19:00',500);
-INSERT INTO Partidas(fechaInicio, horaInicio, fechaFin, horaFin, score_partida)  VALUES ('14-12-20','12:00','14-12-20','13:00',600);
+INSERT INTO Partida(fechaInicio, horaInicio, fechaFin, horaFin, score_partida)  VALUES ('14-12-20','11:00','14-12-20','11:30',600); 
+INSERT INTO Partida(fechaInicio, horaInicio, fechaFin, horaFin, score_partida)  VALUES ('15-12-20','4:00','15-12-20','4:45',300);
+INSERT INTO Partida(fechaInicio, horaInicio, fechaFin, horaFin, score_partida)  VALUES ('14-12-20','21:00','14-12-20','22:00',500);
+INSERT INTO Partida(fechaInicio, horaInicio, fechaFin, horaFin, score_partida)  VALUES ('14-12-20','22:00','14-12-20','23:30',700);
+INSERT INTO Partida(fechaInicio, horaInicio, fechaFin, horaFin, score_partida)  VALUES ('14-12-20','6:00','14-12-20','9:00',100);
+INSERT INTO Partida(fechaInicio, horaInicio, fechaFin, horaFin, score_partida)  VALUES ('14-12-20','9:00','14-12-20','19:00',200);
+INSERT INTO Partida(fechaInicio, horaInicio, fechaFin, horaFin, score_partida)  VALUES ('15-12-20','15:00','15-12-20','19:00',500);
+INSERT INTO Partida(fechaInicio, horaInicio, fechaFin, horaFin, score_partida)  VALUES ('14-12-20','12:00','14-12-20','13:00',600);
 
-CREATE TABLE UsersPartidas			
+CREATE TABLE UserPartida			
 (id_player INTEGER,
  id_game INTEGER,
  FOREIGN KEY (id_player) REFERENCES User (id),
- FOREIGN KEY (id_game) REFERENCES Partidas (id)
+ FOREIGN KEY (id_game) REFERENCES Partida (id)
 ) ENGINE = InnoDB;
 
-INSERT INTO UsersPartidas VALUES (1,1); 
-INSERT INTO UsersPartidas VALUES (2,2); 
-INSERT INTO UsersPartidas VALUES (2,3); 
-INSERT INTO UsersPartidas VALUES (4,4); 
-INSERT INTO UsersPartidas VALUES (5,5); 
-INSERT INTO UsersPartidas VALUES (6,6); 
-INSERT INTO UsersPartidas VALUES (7,7); 
-INSERT INTO UsersPartidas VALUES (8,8); 
+INSERT INTO UserPartida VALUES (1,1); 
+INSERT INTO UserPartida VALUES (2,2); 
+INSERT INTO UserPartida VALUES (2,3); 
+INSERT INTO UserPartida VALUES (4,4); 
+INSERT INTO UserPartida VALUES (5,5); 
+INSERT INTO UserPartida VALUES (6,6); 
+INSERT INTO UserPartida VALUES (7,7); 
+INSERT INTO UserPartida VALUES (8,8); 
 
 
 CREATE TABLE Orders
@@ -72,32 +72,46 @@ INSERT INTO Orders(date, time , price) VALUES ('23-12-20','18:36',100);
 INSERT INTO Orders(date, time , price) VALUES ('28-12-20','06:43',600);
 
 
-CREATE TABLE Elements
+CREATE TABLE Element
 ( id  INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL, 
 name TEXT NOT NULL,
 description TEXT,
 price INTEGER 
 )ENGINE = InnoDB;
 
-INSERT INTO Elements(name, description, price)  VALUES ('Aloe vera' ,'Cura tus quemaduras',5); 
-INSERT INTO Elements(name, description, price)  VALUES ('Hacha' ,'Mata a tus enemigos de un golpe',150); 
-INSERT INTO Elements(name, description, price)  VALUES ('Desparalizante' ,'Librate de la paralisis',10); 
-INSERT INTO Elements(name, description, price)  VALUES ('Cuerda huida' ,'Vuelve al punto de inicio',10); 
-INSERT INTO Elements(name, description, price)  VALUES ('Casco invisible' ,'Hazte invisible 30s',100); 
-INSERT INTO Elements(name, description, price)  VALUES ('Pastilla magica' ,'Aumenta la capacidad de vida',75); 
+INSERT INTO Element(name, description, price)  VALUES ('Aloe vera' ,'Cura tus quemaduras',5); 
+INSERT INTO Element(name, description, price)  VALUES ('Hacha' ,'Mata a tus enemigos de un golpe',150); 
+INSERT INTO Element(name, description, price)  VALUES ('Desparalizante' ,'Librate de la paralisis',10); 
+INSERT INTO Element(name, description, price)  VALUES ('Cuerda huida' ,'Vuelve al punto de inicio',10); 
+INSERT INTO Element(name, description, price)  VALUES ('Casco invisible' ,'Hazte invisible 30s',100); 
+INSERT INTO Element(name, description, price)  VALUES ('Pastilla magica' ,'Aumenta la capacidad de vida',75); 
 
 
-CREATE TABLE OrdersElements	
+CREATE TABLE OrderElement	
 (id_order INTEGER,
  id_element INTEGER,
  FOREIGN KEY (id_order) REFERENCES Orders (id),
- FOREIGN KEY (id_element) REFERENCES Elements (id)
+ FOREIGN KEY (id_element) REFERENCES Element (id)
 ) ENGINE = InnoDB;
 
-INSERT INTO OrdersElements VALUES (1,6); 
-INSERT INTO OrdersElements VALUES (2,5); 
-INSERT INTO OrdersElements VALUES (3,4); 
-INSERT INTO OrdersElements VALUES (4,3); 
-INSERT INTO OrdersElements VALUES (5,2); 
-INSERT INTO OrdersElements VALUES (6,1); 
+INSERT INTO OrderElement VALUES (1,6); 
+INSERT INTO OrderElement VALUES (2,5); 
+INSERT INTO OrderElement VALUES (3,4); 
+INSERT INTO OrderElement VALUES (4,3); 
+INSERT INTO OrderElement VALUES (5,2); 
+INSERT INTO OrderElement VALUES (6,1); 
+
+CREATE TABLE Item
+( id INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL,
+name TEXT NOT NULL, 
+hit INTEGER,
+defense INTEGER,
+healing INTEGER,
+damage INTEGER
+)ENGINE = InnoDB;
+
+INSERT INTO Item(name , hit, defense, healing, damage) VALUES ('Defense', 3, 4, 5, 6);
+INSERT INTO Item(name , hit, defense, healing, damage) VALUES ('Weapone', 3, 0, 0, 4); 
+INSERT INTO Item(name , hit, defense, healing, damage) VALUES ('Weapone', 1, 0, 0, 6); 
+INSERT INTO Item(name , hit, defense, healing, damage) VALUES ('Defense', 5, 0, 5, 0);
 
