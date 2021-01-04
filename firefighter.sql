@@ -116,3 +116,5 @@ INSERT INTO Item(name , hit, defense, healing, damage) VALUES ('Weapone', 1, 0, 
 INSERT INTO Item(name , hit, defense, healing, damage) VALUES ('Defense', 5, 0, 5, 0);
 
 
+
+
