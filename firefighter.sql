@@ -22,39 +22,39 @@ INSERT INTO User(username, email, password, birthdate, score, level)  VALUES ('S
 INSERT INTO User(username, email, password, birthdate, score, level)  VALUES ('Kei8','kei@gmail.com','Keicontra', '27/12/1998', 0, 1); 
 
 
-CREATE TABLE Partida
+CREATE TABLE Game
 ( id  INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL, 
-fechaInicio TEXT NOT NULL,
-horaInicio TEXT ,
-fechaFin TEXT NOT NULL, 
-horaFin TEXT , 
-score_partida INTEGER 
+dateStart TEXT NOT NULL,
+timeStart TEXT ,
+dateEnd TEXT NOT NULL, 
+timeEnd TEXT , 
+score INTEGER 
 )ENGINE = InnoDB;
 
-INSERT INTO Partida(fechaInicio, horaInicio, fechaFin, horaFin, score_partida)  VALUES ('14-12-20','11:00','14-12-20','11:30',600); 
-INSERT INTO Partida(fechaInicio, horaInicio, fechaFin, horaFin, score_partida)  VALUES ('15-12-20','4:00','15-12-20','4:45',300);
-INSERT INTO Partida(fechaInicio, horaInicio, fechaFin, horaFin, score_partida)  VALUES ('14-12-20','21:00','14-12-20','22:00',500);
-INSERT INTO Partida(fechaInicio, horaInicio, fechaFin, horaFin, score_partida)  VALUES ('14-12-20','22:00','14-12-20','23:30',700);
-INSERT INTO Partida(fechaInicio, horaInicio, fechaFin, horaFin, score_partida)  VALUES ('14-12-20','6:00','14-12-20','9:00',100);
-INSERT INTO Partida(fechaInicio, horaInicio, fechaFin, horaFin, score_partida)  VALUES ('14-12-20','9:00','14-12-20','19:00',200);
-INSERT INTO Partida(fechaInicio, horaInicio, fechaFin, horaFin, score_partida)  VALUES ('15-12-20','15:00','15-12-20','19:00',500);
-INSERT INTO Partida(fechaInicio, horaInicio, fechaFin, horaFin, score_partida)  VALUES ('14-12-20','12:00','14-12-20','13:00',600);
+INSERT INTO Game(dateStart, timeStart, dateEnd, timeEnd, score)  VALUES ('14-12-20','11:00','14-12-20','11:30',600); 
+INSERT INTO Game(dateStart, timeStart, dateEnd, timeEnd, score)  VALUES ('15-12-20','4:00','15-12-20','4:45',300);
+INSERT INTO Game(dateStart, timeStart, dateEnd, timeEnd, score)  VALUES ('14-12-20','21:00','14-12-20','22:00',500);
+INSERT INTO Game(dateStart, timeStart, dateEnd, timeEnd, score)  VALUES ('14-12-20','22:00','14-12-20','23:30',700);
+INSERT INTO Game(dateStart, timeStart, dateEnd, timeEnd, score)  VALUES ('14-12-20','6:00','14-12-20','9:00',100);
+INSERT INTO Game(dateStart, timeStart, dateEnd, timeEnd, score)  VALUES ('14-12-20','9:00','14-12-20','19:00',200);
+INSERT INTO Game(dateStart, timeStart, dateEnd, timeEnd, score)  VALUES ('15-12-20','15:00','15-12-20','19:00',500);
+INSERT INTO Game(dateStart, timeStart, dateEnd, timeEnd, score)  VALUES ('14-12-20','12:00','14-12-20','13:00',600);
 
-CREATE TABLE UserPartida			
+CREATE TABLE UserGame			
 (id_player INTEGER,
  id_game INTEGER,
  FOREIGN KEY (id_player) REFERENCES User (id),
- FOREIGN KEY (id_game) REFERENCES Partida (id)
+ FOREIGN KEY (id_game) REFERENCES Game(id)
 ) ENGINE = InnoDB;
 
-INSERT INTO UserPartida VALUES (1,1); 
-INSERT INTO UserPartida VALUES (2,2); 
-INSERT INTO UserPartida VALUES (2,3); 
-INSERT INTO UserPartida VALUES (4,4); 
-INSERT INTO UserPartida VALUES (5,5); 
-INSERT INTO UserPartida VALUES (6,6); 
-INSERT INTO UserPartida VALUES (7,7); 
-INSERT INTO UserPartida VALUES (8,8); 
+INSERT INTO UserGame VALUES (1,1); 
+INSERT INTO UserGame VALUES (2,2); 
+INSERT INTO UserGame VALUES (2,3); 
+INSERT INTO UserGame VALUES (4,4); 
+INSERT INTO UserGame VALUES (5,5); 
+INSERT INTO UserGame VALUES (6,6); 
+INSERT INTO UserGame VALUES (7,7); 
+INSERT INTO UserGame VALUES (8,8); 
 
 
 CREATE TABLE Orders
@@ -114,4 +114,5 @@ INSERT INTO Item(name , hit, defense, healing, damage) VALUES ('Defense', 3, 4, 
 INSERT INTO Item(name , hit, defense, healing, damage) VALUES ('Weapone', 3, 0, 0, 4); 
 INSERT INTO Item(name , hit, defense, healing, damage) VALUES ('Weapone', 1, 0, 0, 6); 
 INSERT INTO Item(name , hit, defense, healing, damage) VALUES ('Defense', 5, 0, 5, 0);
+
 
