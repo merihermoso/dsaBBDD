@@ -115,6 +115,27 @@ INSERT INTO Item(name , hit, defense, healing, damage) VALUES ('Weapone', 3, 0, 
 INSERT INTO Item(name , hit, defense, healing, damage) VALUES ('Weapone', 1, 0, 0, 6); 
 INSERT INTO Item(name , hit, defense, healing, damage) VALUES ('Defense', 5, 0, 5, 0);
 
+CREATE TABLE GameItem	
+(id_game INTEGER,
+ id_item INTEGER,
+ FOREIGN KEY (id_game) REFERENCES Game (id),
+ FOREIGN KEY (id_item) REFERENCES Item (id)
+) ENGINE = InnoDB;
+
+INSERT INTO Gameitem VALUES (1,1);
+INSERT INTO Gameitem VALUES (1,2);
+INSERT INTO Gameitem VALUES (1,3);
+INSERT INTO Gameitem VALUES (1,4);
+INSERT INTO Gameitem VALUES (2,3); 
+INSERT INTO Gameitem VALUES (2,4); 
+INSERT INTO Gameitem VALUES (2,3); 
+INSERT INTO Gameitem VALUES (3,1); 
+INSERT INTO Gameitem VALUES (3,4);
+INSERT INTO Gameitem VALUES (3,3);
+INSERT INTO Gameitem VALUES (4,3); 
+INSERT INTO Gameitem VALUES (5,2); 
+INSERT INTO Gameitem VALUES (6,1); 
+INSERT INTO Gameitem VALUES (6,3); 
 
 
 
