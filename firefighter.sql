@@ -70,6 +70,19 @@ INSERT INTO Orders(date, time , price) VALUES ('26-11-20','19:46',10);
 INSERT INTO Orders(date, time , price) VALUES ('23-12-20','18:36',100); 
 INSERT INTO Orders(date, time , price) VALUES ('28-12-20','06:43',600);
 
+CREATE TABLE UserOrder	
+(id_user INTEGER,
+ id_order INTEGER,
+ FOREIGN KEY (id_user) REFERENCES User (id),
+ FOREIGN KEY (id_order) REFERENCES Orders (id)
+) ENGINE = InnoDB;
+
+INSERT INTO UserOrder VALUES (1,6); 
+INSERT INTO UserOrder VALUES (2,5); 
+INSERT INTO UserOrder VALUES (3,4); 
+INSERT INTO UserOrder VALUES (4,3); 
+INSERT INTO UserOrder VALUES (6,2); 
+INSERT INTO UserOrder VALUES (6,1); 
 
 CREATE TABLE Element
 ( id  INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL, 
@@ -114,25 +127,26 @@ INSERT INTO Item(name , hit, defense, healing, damage) VALUES ('Weapone', 3, 0, 
 INSERT INTO Item(name , hit, defense, healing, damage) VALUES ('Weapone', 1, 0, 0, 6); 
 INSERT INTO Item(name , hit, defense, healing, damage) VALUES ('Defense', 5, 0, 5, 0);
 
+CREATE TABLE Player
+( id INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL,
+name TEXT NOT NULL, 
+hit INTEGER,
+defense INTEGER,
+healing INTEGER,
+damage INTEGER
+)ENGINE = InnoDB;
+
+INSERT INTO Player(name , hit, defense, healing, damage) VALUES ('NewPlayer', 3, 3, 3, 3);
+
+
 CREATE TABLE Inventory 
-(id_game INTEGER,
+(id_player INTEGER,
  id_item INTEGER,
- FOREIGN KEY (id_game) REFERENCES Game (id),
- FOREIGN KEY (id_item) REFERENCES Item (id)
+ FOREIGN KEY (id_player) REFERENCES Player (id),
+ FOREIGN KEY (id_item) REFERENCES Item (id),
+ quantity INTEGER
 ) ENGINE = InnoDB;
 
-INSERT INTO Inventory VALUES (1,1);
-INSERT INTO Inventory VALUES (1,2);
-INSERT INTO Inventory VALUES (1,3);
-INSERT INTO Inventory VALUES (1,4);
-INSERT INTO Inventory VALUES (2,3); 
-INSERT INTO Inventory VALUES (2,4); 
-INSERT INTO Inventory VALUES (2,3); 
-INSERT INTO Inventory VALUES (3,1); 
-INSERT INTO Inventory VALUES (3,4);
-INSERT INTO Inventory VALUES (3,3);
-INSERT INTO Inventory VALUES (4,3); 
-INSERT INTO Inventory VALUES (5,2); 
 
 CREATE TABLE Enemy
 ( id INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL,
