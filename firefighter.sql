@@ -12,15 +12,14 @@ score INTEGER,
 level INTEGER
 )ENGINE = InnoDB;
 
-INSERT INTO User(username, email, password, birthdate, score, level) VALUES ('Marta1','marta@gmail.com','Martacontra', '27/12/1998', 0, 1); 
-INSERT INTO User(username, email, password, birthdate, score, level)  VALUES ('Cacatua2','cacatua@gmail.com','Cacatuacontra', '27/12/1998', 0, 1);
-INSERT INTO User(username, email, password, birthdate, score, level)  VALUES ('Montse3','montse@gmail.com','Montsecontra', '27/12/1998', 0, 1); 
-INSERT INTO User(username, email, password, birthdate, score, level)  VALUES ('Pere4','pere@gmail.com','Perecontra', '27/12/1998', 0, 1); 
-INSERT INTO User(username, email, password, birthdate, score, level)  VALUES ('Alex5','alex@gmail.com','Mericontra', '27/12/1998', 0, 1);  
-INSERT INTO User(username, email, password, birthdate, score, level)  VALUES ('Meri6','meri@gmail.com','Mericontra', '27/12/1998', 0, 1);  
-INSERT INTO User(username, email, password, birthdate, score, level)  VALUES ('Sol7','sol@gmail.com','Solcontra', '27/12/1998', 0, 1); 
-INSERT INTO User(username, email, password, birthdate, score, level)  VALUES ('Kei8','kei@gmail.com','Keicontra', '27/12/1998', 0, 1); 
-
+INSERT INTO User(username, email, password, birthdate, score, level) VALUES ('Marta1','marta@gmail.com','Martacontra', '27/12/2000', 1500, 1); 
+INSERT INTO User(username, email, password, birthdate, score, level)  VALUES ('Cacatua2','cacatua@gmail.com','Cacatuacontra', '27/02/1998', 1000, 1);
+INSERT INTO User(username, email, password, birthdate, score, level)  VALUES ('Montse3','montse@gmail.com','Montsecontra', '27/12/1997', 2000, 1); 
+INSERT INTO User(username, email, password, birthdate, score, level)  VALUES ('Pere4','pere@gmail.com','Perecontra', '27/12/1995', 3000, 1); 
+INSERT INTO User(username, email, password, birthdate, score, level)  VALUES ('Alex5','alex@gmail.com','Mericontra', '27/02/1996', 5000, 1);  
+INSERT INTO User(username, email, password, birthdate, score, level)  VALUES ('Meri6','meri@gmail.com','Mericontra', '27/08/1999', 8000, 1);  
+INSERT INTO User(username, email, password, birthdate, score, level)  VALUES ('Sol7','sol@gmail.com','Solcontra', '27/10/1990', 200, 1); 
+INSERT INTO User(username, email, password, birthdate, score, level)  VALUES ('Kei8','kei@gmail.com','Keicontra', '23/06/1988', 15000, 1); 
 
 CREATE TABLE Game
 ( id  INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL, 
