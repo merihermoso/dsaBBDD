@@ -133,3 +133,17 @@ INSERT INTO Inventory VALUES (3,4);
 INSERT INTO Inventory VALUES (3,3);
 INSERT INTO Inventory VALUES (4,3); 
 INSERT INTO Inventory VALUES (5,2); 
+
+CREATE TABLE Enemy
+( id INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL,
+name TEXT NOT NULL, 
+hit INTEGER,
+defense INTEGER,
+healing INTEGER,
+damage INTEGER
+)ENGINE = InnoDB;
+
+INSERT INTO Enemy(name , hit, defense, healing, damage) VALUES ('Defense', 3, 4, 5, 6);
+INSERT INTO Enemy(name , hit, defense, healing, damage) VALUES ('Weapone', 3, 0, 0, 4); 
+INSERT INTO Enemy(name , hit, defense, healing, damage) VALUES ('Weapone', 1, 0, 0, 6); 
+INSERT INTO Enemy(name , hit, defense, healing, damage) VALUES ('Defense', 5, 0, 5, 0);
