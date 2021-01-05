@@ -147,3 +147,15 @@ INSERT INTO Enemy(name , hit, defense, healing, damage) VALUES ('Defense', 3, 4,
 INSERT INTO Enemy(name , hit, defense, healing, damage) VALUES ('Weapone', 3, 0, 0, 4); 
 INSERT INTO Enemy(name , hit, defense, healing, damage) VALUES ('Weapone', 1, 0, 0, 6); 
 INSERT INTO Enemy(name , hit, defense, healing, damage) VALUES ('Defense', 5, 0, 5, 0);
+
+
+CREATE TABLE Map
+( id  INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL, 
+name TEXT NOT NULL,
+description TEXT,
+price INTEGER 
+)ENGINE = InnoDB;
+
+INSERT INTO Map(name, description, price)  VALUES ('PrimerMapa' ,'kasjhdkajshk',5); 
+INSERT INTO Map(name, description, price)  VALUES ('SegundoMapa' ,'kasjhdkajshk',150); 
+INSERT INTO Map(name, description, price)  VALUES ('TercerMapa' ,'kasjhdkajshk',10); 
