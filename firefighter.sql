@@ -8,18 +8,19 @@ username TEXT NOT NULL,
 email TEXT NOT NULL, 
 password TEXT NOT NULL, 
 birthdate TEXT NOT NULL,
+status TEXT NOT NULL,
 score INTEGER,
 level INTEGER
 )ENGINE = InnoDB;
 
-INSERT INTO User(username, email, password, birthdate, score, level) VALUES ('Marta1','marta@gmail.com','9cb217e14b3f01505c764b0c440e5db7a4cf8458f13204cd0593055908fca9fc', '27/12/2000', 1500, 1); 
-INSERT INTO User(username, email, password, birthdate, score, level)  VALUES ('Cacatua2','cacatua@gmail.com','dfe2dca2fab705b346041671e7317a90e456392ec74ad51eda726ed94f92a845', '27/02/1998', 1000, 1);
-INSERT INTO User(username, email, password, birthdate, score, level)  VALUES ('Montse3','montse@gmail.com','73c9bd4f3552517488af0880fbff656c6109e90e95fbcc9846653ebcb2c857ab', '27/12/1997', 2000, 1); 
-INSERT INTO User(username, email, password, birthdate, score, level)  VALUES ('Pere4','pere@gmail.com','e467c91d5d40934f1ee207814faa375b57e70ce5a2e6a06ddb391312618e925f', '27/12/1995', 3000, 1); 
-INSERT INTO User(username, email, password, birthdate, score, level)  VALUES ('Alex5','alex@gmail.com','5a5b1147857716e6c81f37d115427a8d7e2951e606993e50d62d36dbd20e8d69', '27/02/1996', 5000, 1);  
-INSERT INTO User(username, email, password, birthdate, score, level)  VALUES ('Meri6','meri@gmail.com','adfd551d488505017a3f5d921d634de13390c95735eb9e847679ca458c57d126', '27/08/1999', 8000, 1);  
-INSERT INTO User(username, email, password, birthdate, score, level)  VALUES ('Sol7','sol@gmail.com','89e0a57deb5e7e483c35f15f28b019cfc998709819fc0bdaf79386a5e7be60c6', '27/10/1990', 200, 1); 
-INSERT INTO User(username, email, password, birthdate, score, level)  VALUES ('Kei8','kei@gmail.com','774bc10a35da95c446b8a6f156f47d93cfddeb35282d89b115a6cc25518ac9b2', '23/06/1988', 15000, 1); 
+INSERT INTO User(username, email, password, birthdate, status, score, level) VALUES ('Marta1','marta@gmail.com','9cb217e14b3f01505c764b0c440e5db7a4cf8458f13204cd0593055908fca9fc', '27/12/2000','Active', 1500, 1); 
+INSERT INTO User(username, email, password, birthdate, status, score, level)  VALUES ('Cacatua2','cacatua@gmail.com','dfe2dca2fab705b346041671e7317a90e456392ec74ad51eda726ed94f92a845', '27/02/1998','Active', 1000, 1);
+INSERT INTO User(username, email, password, birthdate, status, score, level)  VALUES ('Montse3','montse@gmail.com','73c9bd4f3552517488af0880fbff656c6109e90e95fbcc9846653ebcb2c857ab', '27/12/1997','Active', 2000, 1); 
+INSERT INTO User(username, email, password, birthdate, status, score, level)  VALUES ('Pere4','pere@gmail.com','e467c91d5d40934f1ee207814faa375b57e70ce5a2e6a06ddb391312618e925f', '27/12/1995','Active', 3000, 1); 
+INSERT INTO User(username, email, password, birthdate, status, score, level)  VALUES ('Alex5','alex@gmail.com','5a5b1147857716e6c81f37d115427a8d7e2951e606993e50d62d36dbd20e8d69', '27/02/1996','Active', 5000, 1);  
+INSERT INTO User(username, email, password, birthdate, status, score, level)  VALUES ('Meri6','meri@gmail.com','adfd551d488505017a3f5d921d634de13390c95735eb9e847679ca458c57d126', '27/08/1999','Active', 8000, 1);  
+INSERT INTO User(username, email, password, birthdate, status, score, level)  VALUES ('Sol7','sol@gmail.com','89e0a57deb5e7e483c35f15f28b019cfc998709819fc0bdaf79386a5e7be60c6', '27/10/1990','Active', 200, 1); 
+INSERT INTO User(username, email, password, birthdate, status, score, level)  VALUES ('Kei8','kei@gmail.com','774bc10a35da95c446b8a6f156f47d93cfddeb35282d89b115a6cc25518ac9b2', '23/06/1988','Active', 15000, 1); 
 
 
 CREATE TABLE Game
@@ -83,7 +84,7 @@ CREATE TABLE Player
 status TEXT,
 coins INTEGER,
 score INTEGER,
-numLevel INTEGER,
+level INTEGER,
 speed INTEGER, 
 hit INTEGER,
 defense INTEGER,
@@ -91,13 +92,13 @@ healing INTEGER,
 damage INTEGER
 )ENGINE = InnoDB;
 
-INSERT INTO Player(status, coins, score, numLevel, speed, hit, defense, healing, damage) VALUES ('Playing', 0, 0, 2, 3,3,3,3,3);
-INSERT INTO Player(status, coins, score, numLevel, speed, hit, defense, healing, damage) VALUES ('Playing', 0, 0, 2, 3,3,3,3,3);
-INSERT INTO Player(status, coins, score, numLevel, speed, hit, defense, healing, damage) VALUES ('Playing', 0, 0, 2, 3,3,3,3,3);
-INSERT INTO Player(status, coins, score, numLevel, speed, hit, defense, healing, damage) VALUES ('Playing', 0, 0, 2, 3,3,3,3,3);
-INSERT INTO Player(status, coins, score, numLevel, speed, hit, defense, healing, damage) VALUES ('Playing', 0, 0, 2, 3,3,3,3,3);
-INSERT INTO Player(status, coins, score, numLevel, speed, hit, defense, healing, damage) VALUES ('Playing', 0, 0, 2, 3,3,3,3,3);
-INSERT INTO Player(status, coins, score, numLevel, speed, hit, defense, healing, damage) VALUES ('Playing', 0, 0, 2, 3,3,3,3,3);
+INSERT INTO Player(status, coins, score, level, speed, hit, defense, healing, damage) VALUES ('Playing', 0, 0, 2, 3,3,3,3,3);
+INSERT INTO Player(status, coins, score, level, speed, hit, defense, healing, damage) VALUES ('Playing', 0, 0, 2, 3,3,3,3,3);
+INSERT INTO Player(status, coins, score, level, speed, hit, defense, healing, damage) VALUES ('Playing', 0, 0, 2, 3,3,3,3,3);
+INSERT INTO Player(status, coins, score, level, speed, hit, defense, healing, damage) VALUES ('Playing', 0, 0, 2, 3,3,3,3,3);
+INSERT INTO Player(status, coins, score, level, speed, hit, defense, healing, damage) VALUES ('Playing', 0, 0, 2, 3,3,3,3,3);
+INSERT INTO Player(status, coins, score, level, speed, hit, defense, healing, damage) VALUES ('Playing', 0, 0, 2, 3,3,3,3,3);
+INSERT INTO Player(status, coins, score, level, speed, hit, defense, healing, damage) VALUES ('Playing', 0, 0, 2, 3,3,3,3,3);
 
 CREATE TABLE UserPlayer
 (id_user INTEGER,
@@ -167,4 +168,3 @@ price INTEGER
 INSERT INTO Map(name, description, price)  VALUES ('PrimerMapa' ,'kasjhdkajshk',5); 
 INSERT INTO Map(name, description, price)  VALUES ('SegundoMapa' ,'kasjhdkajshk',150); 
 INSERT INTO Map(name, description, price)  VALUES ('TercerMapa' ,'kasjhdkajshk',10);
-
