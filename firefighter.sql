@@ -41,43 +41,40 @@ INSERT INTO Game(dateStart, timeStart, dateEnd, timeEnd, score)  VALUES ('14-12-
 INSERT INTO Game(dateStart, timeStart, dateEnd, timeEnd, score)  VALUES ('15-12-20','15:00','15-12-20','19:00',500);
 INSERT INTO Game(dateStart, timeStart, dateEnd, timeEnd, score)  VALUES ('14-12-20','12:00','14-12-20','13:00',600);
 
-CREATE TABLE Element
+CREATE TABLE Item
 ( id  INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL, 
 name TEXT NOT NULL,
-description TEXT,
-price INTEGER 
-)ENGINE = InnoDB;
-
-INSERT INTO Element(name, description, price)  VALUES ('Aloe vera' ,'Cura tus quemaduras',5); 
-INSERT INTO Element(name, description, price)  VALUES ('Hacha' ,'Mata a tus enemigos de un golpe',150); 
-INSERT INTO Element(name, description, price)  VALUES ('Desparalizante' ,'Librate de la paralisis',10); 
-INSERT INTO Element(name, description, price)  VALUES ('Cuerda huida' ,'Vuelve al punto de inicio',10); 
-INSERT INTO Element(name, description, price)  VALUES ('Casco invisible' ,'Hazte invisible 30s',100); 
-INSERT INTO Element(name, description, price)  VALUES ('Pastilla magica' ,'Aumenta la capacidad de vida',75); 
-
-CREATE TABLE UserElement	
-(id_user INTEGER,
- id_element INTEGER,
- FOREIGN KEY (id_user) REFERENCES User (id),
- FOREIGN KEY (id_element) REFERENCES Element (id)
-) ENGINE = InnoDB;
-
-INSERT INTO UserElement VALUES (1,6); 
-INSERT INTO UserElement VALUES (2,5); 
-
-CREATE TABLE Item
-( id INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL,
-name TEXT NOT NULL, 
 hit INTEGER,
 defense INTEGER,
 healing INTEGER,
-damage INTEGER
+damage INTEGER,
+price INTEGER,
+description TEXT,
+image TEXT
 )ENGINE = InnoDB;
 
-INSERT INTO Item(name , hit, defense, healing, damage) VALUES ('Defense', 3, 4, 5, 6);
-INSERT INTO Item(name , hit, defense, healing, damage) VALUES ('Weapone', 3, 0, 0, 4); 
-INSERT INTO Item(name , hit, defense, healing, damage) VALUES ('Gun', 1, 0, 0, 6); 
-INSERT INTO Item(name , hit, defense, healing, damage) VALUES ('Coin', 5, 0, 5, 0);
+INSERT INTO Item(name, hit, defense, healing, damage, price, description, image)  VALUES ('Aloe vera' , 1, 0, 0, 6,5, 'Cura tus quemaduras','imagenbbdd'); 
+INSERT INTO Item(name, hit, defense, healing, damage, price, description, image)  VALUES ('Hacha' , 1, 0, 0, 6,150,'Mata a tus enemigos de un golpe','imagenbbdd'); 
+INSERT INTO Item(name, hit, defense, healing, damage, price, description, image)  VALUES ('Desparalizante' , 1, 0, 0, 6,10,'Librate de la paralisis','imagenbbdd'); 
+INSERT INTO Item(name, hit, defense, healing, damage, price, description, image)  VALUES ('Cuerda huida' , 1, 0, 0, 6,10,'Vuelve al punto de inicio','imagenbbdd'); 
+INSERT INTO Item(name, hit, defense, healing, damage, price, description, image)  VALUES ('Casco invisible' , 1, 0, 0, 6,100,'Hazte invisible 30s','imagenbbdd'); 
+INSERT INTO Item(name, hit, defense, healing, damage, price, description, image)  VALUES ('Pastilla magica' , 1, 0, 0, 6,75,'Aumenta la capacidad de vida','imagenbbdd'); 
+INSERT INTO Item(name, hit, defense, healing, damage, price, description, image)  VALUES ('Moneda' , 1, 0, 0, 6,10,'Consigue mas monedas','imagenbbdd'); 
+INSERT INTO Item(name, hit, defense, healing, damage, price, description, image)  VALUES ('Ataque' , 1, 0, 0, 6,100,'Hazte mas fuerte','imagenbbdd'); 
+INSERT INTO Item(name, hit, defense, healing, damage, price, description, image)  VALUES ('Defensa' , 1, 0, 0, 6,75,'Aumenta la durabilidad de vida','imagenbbdd'); 
+
+CREATE TABLE Inventory 
+(id_user INTEGER,
+ id_item INTEGER,
+ quantity INTEGER,
+ FOREIGN KEY (id_user) REFERENCES User (id),
+ FOREIGN KEY (id_item) REFERENCES Item (id)
+) ENGINE = InnoDB;
+
+INSERT INTO Inventory VALUES (1,1,1); 
+INSERT INTO Inventory VALUES (1,2,3);
+INSERT INTO Inventory VALUES (2,1,1);
+INSERT INTO Inventory VALUES (2,2,1);
 
 CREATE TABLE Player
 ( id INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL,
@@ -92,13 +89,13 @@ healing INTEGER,
 damage INTEGER
 )ENGINE = InnoDB;
 
-INSERT INTO Player(status, coins, score, level, speed, hit, defense, healing, damage) VALUES ('Playing', 0, 0, 2, 3,3,3,3,3);
-INSERT INTO Player(status, coins, score, level, speed, hit, defense, healing, damage) VALUES ('Playing', 0, 0, 2, 3,3,3,3,3);
-INSERT INTO Player(status, coins, score, level, speed, hit, defense, healing, damage) VALUES ('Playing', 0, 0, 2, 3,3,3,3,3);
-INSERT INTO Player(status, coins, score, level, speed, hit, defense, healing, damage) VALUES ('Playing', 0, 0, 2, 3,3,3,3,3);
-INSERT INTO Player(status, coins, score, level, speed, hit, defense, healing, damage) VALUES ('Playing', 0, 0, 2, 3,3,3,3,3);
-INSERT INTO Player(status, coins, score, level, speed, hit, defense, healing, damage) VALUES ('Playing', 0, 0, 2, 3,3,3,3,3);
-INSERT INTO Player(status, coins, score, level, speed, hit, defense, healing, damage) VALUES ('Playing', 0, 0, 2, 3,3,3,3,3);
+INSERT INTO Player(status, coins, score, level, speed, hit, defense, healing, damage) VALUES ('Playing', 10, 30, 2, 3,3,3,3,3);
+INSERT INTO Player(status, coins, score, level, speed, hit, defense, healing, damage) VALUES ('Playing', 20, 10, 2, 3,3,3,3,3);
+INSERT INTO Player(status, coins, score, level, speed, hit, defense, healing, damage) VALUES ('Playing', 30, 80, 2, 3,3,3,3,3);
+INSERT INTO Player(status, coins, score, level, speed, hit, defense, healing, damage) VALUES ('Playing', 90, 70, 2, 3,3,3,3,3);
+INSERT INTO Player(status, coins, score, level, speed, hit, defense, healing, damage) VALUES ('Playing', 80, 60, 2, 3,3,3,3,3);
+INSERT INTO Player(status, coins, score, level, speed, hit, defense, healing, damage) VALUES ('Playing', 70, 50, 2, 3,3,3,3,3);
+INSERT INTO Player(status, coins, score, level, speed, hit, defense, healing, damage) VALUES ('Playing', 60, 40, 2, 3,3,3,3,3);
 
 CREATE TABLE UserPlayer
 (id_user INTEGER,
@@ -130,19 +127,6 @@ INSERT INTO PlayerGame VALUES (4,4);
 INSERT INTO PlayerGame VALUES (5,5); 
 INSERT INTO PlayerGame VALUES (6,6); 
 INSERT INTO PlayerGame VALUES (7,7); 
-
-CREATE TABLE Inventory 
-(id_player INTEGER,
- id_item INTEGER,
- quantity INTEGER,
- FOREIGN KEY (id_player) REFERENCES Player (id),
- FOREIGN KEY (id_item) REFERENCES Item (id)
-) ENGINE = InnoDB;
-
-INSERT INTO Inventory VALUES (1,1,1); 
-INSERT INTO Inventory VALUES (1,2,3);
-INSERT INTO Inventory VALUES (2,1,1);
-INSERT INTO Inventory VALUES (2,2,1);
 
 CREATE TABLE Enemy
 ( id INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL,
