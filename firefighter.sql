@@ -67,14 +67,15 @@ CREATE TABLE Inventory
 (id_user INTEGER,
  id_item INTEGER,
  quantity INTEGER,
+ quantityShop INTEGER,
  FOREIGN KEY (id_user) REFERENCES User (id),
  FOREIGN KEY (id_item) REFERENCES Item (id)
 ) ENGINE = InnoDB;
 
-INSERT INTO Inventory VALUES (1,1,1); 
-INSERT INTO Inventory VALUES (1,2,3);
-INSERT INTO Inventory VALUES (2,1,1);
-INSERT INTO Inventory VALUES (2,2,1);
+INSERT INTO Inventory VALUES (1,1,1,8); 
+INSERT INTO Inventory VALUES (1,2,3,5);
+INSERT INTO Inventory VALUES (2,1,1,3);
+INSERT INTO Inventory VALUES (2,2,1,24);
 
 CREATE TABLE Player
 ( id INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL,
