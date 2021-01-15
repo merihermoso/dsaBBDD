@@ -8,7 +8,6 @@ username TEXT NOT NULL,
 email TEXT NOT NULL, 
 password TEXT NOT NULL, 
 birthdate TEXT NOT NULL,
-status TEXT NOT NULL,
 score INTEGER,
 level INTEGER
 )ENGINE = InnoDB;
