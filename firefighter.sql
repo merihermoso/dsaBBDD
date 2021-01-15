@@ -66,7 +66,7 @@ INSERT INTO Item(name, hit, defense, healing, damage, price, description, image)
 INSERT INTO Item(name, hit, defense, healing, damage, price, description, image)  VALUES ('Mascara' , 1, 0, 0, 6,100,'No te quemaras la cara','\mascara.png'); 
 INSERT INTO Item(name, hit, defense, healing, damage, price, description, image)  VALUES ('Pastilla magica' , 1, 0, 0, 6,75,'Misteriosamente te hace sentir mejor','\pastilla.png'); 
 INSERT INTO Item(name, hit, defense, healing, damage, price, description, image)  VALUES ('Extintor' , 1, 0, 0, 6,10,'Apaga el mal','\extintor.png'); 
-INSERT INTO Item(name, hit, defense, healing, damage, price, description, image)  VALUES ('Mangera' , 1, 0, 0, 6,100,'Tira agua','\mangera.png'); 
+INSERT INTO Item(name, hit, defense, healing, damage, price, description, image)  VALUES ('Manguera' , 1, 0, 0, 6,100,'Tira agua','\mangera.png'); 
 INSERT INTO Item(name, hit, defense, healing, damage, price, description, image)  VALUES ('Hacha' , 1, 0, 0, 6,75,'Abrete paso por las malas','\hacha.png'); 
 
 CREATE TABLE Inventory 
