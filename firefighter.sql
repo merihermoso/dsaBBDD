@@ -58,15 +58,15 @@ image TEXT
 )ENGINE = InnoDB;
 
 
-INSERT INTO Item(name, hit, defense, healing, damage, price, description, image)  VALUES ('Aloe vera' , 1, 0, 0, 6,5, 'Cura tus quemaduras','\Media.1.png'); 
-INSERT INTO Item(name, hit, defense, healing, damage, price, description, image)  VALUES ('Hacha' , 1, 0, 0, 6,150,'Mata a tus enemigos de un golpe','\Media.2.png'); 
-INSERT INTO Item(name, hit, defense, healing, damage, price, description, image)  VALUES ('Desparalizante' , 1, 0, 0, 6,10,'Librate de la paralisis','\Media.3.png'); 
-INSERT INTO Item(name, hit, defense, healing, damage, price, description, image)  VALUES ('Cuerda huida' , 1, 0, 0, 6,10,'Vuelve al punto de inicio','\Media.4.png'); 
-INSERT INTO Item(name, hit, defense, healing, damage, price, description, image)  VALUES ('Casco invisible' , 1, 0, 0, 6,100,'Hazte invisible 30s','\Media.5.png'); 
-INSERT INTO Item(name, hit, defense, healing, damage, price, description, image)  VALUES ('Pastilla magica' , 1, 0, 0, 6,75,'Aumenta la capacidad de vida','\Media.6.png'); 
-INSERT INTO Item(name, hit, defense, healing, damage, price, description, image)  VALUES ('Moneda' , 1, 0, 0, 6,10,'Consigue mas monedas','imagenbbdd'); 
-INSERT INTO Item(name, hit, defense, healing, damage, price, description, image)  VALUES ('Ataque' , 1, 0, 0, 6,100,'Hazte mas fuerte','imagenbbdd'); 
-INSERT INTO Item(name, hit, defense, healing, damage, price, description, image)  VALUES ('Defensa' , 1, 0, 0, 6,75,'Aumenta la durabilidad de vida','imagenbbdd'); 
+INSERT INTO Item(name, hit, defense, healing, damage, price, description, image)  VALUES ('Aloe vera' , 1, 0, 0, 6,5, 'Cura tus quemaduras','\aloevera.png'); 
+INSERT INTO Item(name, hit, defense, healing, damage, price, description, image)  VALUES ('Venda' , 1, 0, 0, 6,150,'Tapa tus quemaduras, si no las ves no estan','\venda.png'); 
+INSERT INTO Item(name, hit, defense, healing, damage, price, description, image)  VALUES ('Agua' , 1, 0, 0, 6,10,'Se puede beber','\agua.3.png'); 
+INSERT INTO Item(name, hit, defense, healing, damage, price, description, image)  VALUES ('Escudo' , 1, 0, 0, 6,10,'Te protege de los ataques','\escudo.png'); 
+INSERT INTO Item(name, hit, defense, healing, damage, price, description, image)  VALUES ('Mascara' , 1, 0, 0, 6,100,'No te quemaras la cara','\mascara.png'); 
+INSERT INTO Item(name, hit, defense, healing, damage, price, description, image)  VALUES ('Pastilla magica' , 1, 0, 0, 6,75,'Misteriosamente te hace sentir mejor','\pastilla.png'); 
+INSERT INTO Item(name, hit, defense, healing, damage, price, description, image)  VALUES ('Extintor' , 1, 0, 0, 6,10,'Apaga el mal','\extintor.png'); 
+INSERT INTO Item(name, hit, defense, healing, damage, price, description, image)  VALUES ('Mangera' , 1, 0, 0, 6,100,'Tira agua','\mangera.png'); 
+INSERT INTO Item(name, hit, defense, healing, damage, price, description, image)  VALUES ('Hacha' , 1, 0, 0, 6,75,'Abrete paso por las malas','\hacha.png'); 
 
 CREATE TABLE Inventory 
 (id_user INTEGER,
