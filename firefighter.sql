@@ -14,7 +14,7 @@ coins INTEGER,
 speed INTEGER,
 defense INTEGER,
 healing INTEGER,
-damage INTEGER,
+damage INTEGER
 )ENGINE = InnoDB;
 
 INSERT INTO User(username, email, password, birthdate, score, level, coins, speed, defense, healing, damage) VALUES ('Marta1','marta@gmail.com','9cb217e14b3f01505c764b0c440e5db7a4cf8458f13204cd0593055908fca9fc', '27/12/2000', 1500, 1, 0, 2, 10, 5, 2); 
