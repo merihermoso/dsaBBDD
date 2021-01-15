@@ -77,57 +77,21 @@ INSERT INTO Inventory VALUES (1,2,3,5);
 INSERT INTO Inventory VALUES (2,1,1,3);
 INSERT INTO Inventory VALUES (2,2,1,24);
 
-CREATE TABLE Player
-( id INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL,
-status TEXT,
-coins INTEGER,
-score INTEGER,
-level INTEGER,
-speed INTEGER, 
-hit INTEGER,
-defense INTEGER,
-healing INTEGER,
-damage INTEGER
-)ENGINE = InnoDB;
 
-INSERT INTO Player(status, coins, score, level, speed, hit, defense, healing, damage) VALUES ('Playing', 10, 30, 2, 3,3,3,3,3);
-INSERT INTO Player(status, coins, score, level, speed, hit, defense, healing, damage) VALUES ('Playing', 20, 10, 2, 3,3,3,3,3);
-INSERT INTO Player(status, coins, score, level, speed, hit, defense, healing, damage) VALUES ('Playing', 30, 80, 2, 3,3,3,3,3);
-INSERT INTO Player(status, coins, score, level, speed, hit, defense, healing, damage) VALUES ('Playing', 90, 70, 2, 3,3,3,3,3);
-INSERT INTO Player(status, coins, score, level, speed, hit, defense, healing, damage) VALUES ('Playing', 80, 60, 2, 3,3,3,3,3);
-INSERT INTO Player(status, coins, score, level, speed, hit, defense, healing, damage) VALUES ('Playing', 70, 50, 2, 3,3,3,3,3);
-INSERT INTO Player(status, coins, score, level, speed, hit, defense, healing, damage) VALUES ('Playing', 60, 40, 2, 3,3,3,3,3);
-
-CREATE TABLE UserPlayer
+CREATE TABLE UserGame			
 (id_user INTEGER,
- id_player INTEGER,
- FOREIGN KEY (id_user) REFERENCES User (id) ON DELETE CASCADE,
- FOREIGN KEY (id_player) REFERENCES Player(id) ON DELETE CASCADE
-) ENGINE = InnoDB;
-
-INSERT INTO UserPlayer VALUES (1,1); 
-INSERT INTO UserPlayer VALUES (2,2); 
-INSERT INTO UserPlayer VALUES (2,3); 
-INSERT INTO UserPlayer VALUES (4,4); 
-INSERT INTO UserPlayer VALUES (5,5); 
-INSERT INTO UserPlayer VALUES (6,6); 
-INSERT INTO UserPlayer VALUES (7,7); 
-
-
-CREATE TABLE PlayerGame			
-(id_player INTEGER,
  id_game INTEGER,
- FOREIGN KEY (id_player) REFERENCES Player (id) ON DELETE CASCADE,
+ FOREIGN KEY (id_user) REFERENCES User (id) ON DELETE CASCADE,
  FOREIGN KEY (id_game) REFERENCES Game(id) ON DELETE CASCADE
 ) ENGINE = InnoDB;
 
-INSERT INTO PlayerGame VALUES (1,1); 
-INSERT INTO PlayerGame VALUES (2,2); 
-INSERT INTO PlayerGame VALUES (2,3); 
-INSERT INTO PlayerGame VALUES (4,4); 
-INSERT INTO PlayerGame VALUES (5,5); 
-INSERT INTO PlayerGame VALUES (6,6); 
-INSERT INTO PlayerGame VALUES (7,7); 
+INSERT INTO UserGame VALUES (1,1); 
+INSERT INTO UserGame VALUES (2,2); 
+INSERT INTO UserGame VALUES (2,3); 
+INSERT INTO UserGame VALUES (4,4); 
+INSERT INTO UserGame VALUES (5,5); 
+INSERT INTO UserGame VALUES (6,6); 
+INSERT INTO UserGame VALUES (7,7); 
 
 CREATE TABLE Enemy
 ( id INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL,
