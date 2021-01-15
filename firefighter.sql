@@ -29,6 +29,7 @@ INSERT INTO User(username, email, password, birthdate, score, level, coins, spee
 
 CREATE TABLE Game
 ( id  INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL, 
+FOREIGN KEY (id_user) REFERENCES User (id) ON DELETE CASCADE,
 dateStart TEXT NOT NULL,
 timeStart TEXT ,
 dateEnd TEXT NOT NULL, 
@@ -36,14 +37,14 @@ timeEnd TEXT ,
 score INTEGER 
 )ENGINE = InnoDB;
 
-INSERT INTO Game(dateStart, timeStart, dateEnd, timeEnd, score)  VALUES ('14-12-20','11:00','14-12-20','11:30',600); 
-INSERT INTO Game(dateStart, timeStart, dateEnd, timeEnd, score)  VALUES ('15-12-20','4:00','15-12-20','4:45',300);
-INSERT INTO Game(dateStart, timeStart, dateEnd, timeEnd, score)  VALUES ('14-12-20','21:00','14-12-20','22:00',500);
-INSERT INTO Game(dateStart, timeStart, dateEnd, timeEnd, score)  VALUES ('14-12-20','22:00','14-12-20','23:30',700);
-INSERT INTO Game(dateStart, timeStart, dateEnd, timeEnd, score)  VALUES ('14-12-20','6:00','14-12-20','9:00',100);
-INSERT INTO Game(dateStart, timeStart, dateEnd, timeEnd, score)  VALUES ('14-12-20','9:00','14-12-20','19:00',200);
-INSERT INTO Game(dateStart, timeStart, dateEnd, timeEnd, score)  VALUES ('15-12-20','15:00','15-12-20','19:00',500);
-INSERT INTO Game(dateStart, timeStart, dateEnd, timeEnd, score)  VALUES ('14-12-20','12:00','14-12-20','13:00',600);
+INSERT INTO Game(id_user, dateStart, timeStart, dateEnd, timeEnd, score)  VALUES (1, '14-12-20','11:00','14-12-20','11:30', 600); 
+INSERT INTO Game(id_user, dateStart, timeStart, dateEnd, timeEnd, score)  VALUES (2, '15-12-20','4:00','15-12-20','4:45', 300);
+INSERT INTO Game(id_user, dateStart, timeStart, dateEnd, timeEnd, score)  VALUES (3, '14-12-20','21:00','14-12-20','22:00', 500);
+INSERT INTO Game(id_user, dateStart, timeStart, dateEnd, timeEnd, score)  VALUES (4, '14-12-20','22:00','14-12-20','23:30', 700);
+INSERT INTO Game(id_user, dateStart, timeStart, dateEnd, timeEnd, score)  VALUES (5, '14-12-20','6:00','14-12-20','9:00', 100);
+INSERT INTO Game(id_user, dateStart, timeStart, dateEnd, timeEnd, score)  VALUES (6, '14-12-20','9:00','14-12-20','19:00', 200);
+INSERT INTO Game(id_user, dateStart, timeStart, dateEnd, timeEnd, score)  VALUES (7, '15-12-20','15:00','15-12-20','19:00', 500);
+INSERT INTO Game(id_user, dateStart, timeStart, dateEnd, timeEnd, score)  VALUES (8, '14-12-20','12:00','14-12-20','13:00', 600);
 
 CREATE TABLE Item
 ( id  INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL, 
@@ -82,21 +83,6 @@ INSERT INTO Inventory VALUES (1,2,3,5);
 INSERT INTO Inventory VALUES (2,1,1,3);
 INSERT INTO Inventory VALUES (2,2,1,24);
 
-
-CREATE TABLE UserGame			
-(id_user INTEGER,
- id_game INTEGER,
- FOREIGN KEY (id_user) REFERENCES User (id) ON DELETE CASCADE,
- FOREIGN KEY (id_game) REFERENCES Game(id) ON DELETE CASCADE
-) ENGINE = InnoDB;
-
-INSERT INTO UserGame VALUES (1,1); 
-INSERT INTO UserGame VALUES (2,2); 
-INSERT INTO UserGame VALUES (2,3); 
-INSERT INTO UserGame VALUES (4,4); 
-INSERT INTO UserGame VALUES (5,5); 
-INSERT INTO UserGame VALUES (6,6); 
-INSERT INTO UserGame VALUES (7,7); 
 
 CREATE TABLE Enemy
 ( id INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL,
