@@ -60,7 +60,7 @@ image TEXT
 
 INSERT INTO Item(name, hit, defense, healing, damage, price, description, image)  VALUES ('Aloe vera' , 1, 0, 0, 6,5, 'Cura tus quemaduras','\aloevera.png'); 
 INSERT INTO Item(name, hit, defense, healing, damage, price, description, image)  VALUES ('Venda' , 1, 0, 0, 6,150,'Tapa tus quemaduras, si no las ves no estan','\venda.png'); 
-INSERT INTO Item(name, hit, defense, healing, damage, price, description, image)  VALUES ('Agua' , 1, 0, 0, 6,10,'Se puede beber','\agua.3.png'); 
+INSERT INTO Item(name, hit, defense, healing, damage, price, description, image)  VALUES ('Agua' , 1, 0, 0, 6,10,'Se puede beber','\agua.png'); 
 INSERT INTO Item(name, hit, defense, healing, damage, price, description, image)  VALUES ('Escudo' , 1, 0, 0, 6,10,'Te protege de los ataques','\escudo.png'); 
 INSERT INTO Item(name, hit, defense, healing, damage, price, description, image)  VALUES ('Mascara' , 1, 0, 0, 6,100,'No te quemaras la cara','\mascara.png'); 
 INSERT INTO Item(name, hit, defense, healing, damage, price, description, image)  VALUES ('Pastilla magica' , 1, 0, 0, 6,75,'Misteriosamente te hace sentir mejor','\pastilla.png'); 
