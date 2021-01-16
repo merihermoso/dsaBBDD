@@ -108,7 +108,7 @@ reward INTEGER,
 damage INTEGER
 )ENGINE = InnoDB;
 
-INSERT INTO Enemy(name, max_health, damage) VALUES ('Enemy1', 1000, 1, 50);
-INSERT INTO Enemy(name, max_health, damage) VALUES ('Enemy2', 2000, 2, 100); 
-INSERT INTO Enemy(name, max_health, damage) VALUES ('Enemy3', 3000, 4, 150); 
-INSERT INTO Enemy(name, max_health, damage) VALUES ('Enemy4', 4000, 6, 200);
+INSERT INTO Enemy(name, max_health, reward, damage) VALUES ('Enemy1', 1000, 1, 50);
+INSERT INTO Enemy(name, max_health, reward, damage) VALUES ('Enemy2', 2000, 2, 100); 
+INSERT INTO Enemy(name, max_health, reward, damage) VALUES ('Enemy3', 3000, 4, 150); 
+INSERT INTO Enemy(name, max_health, reward, damage) VALUES ('Enemy4', 4000, 6, 200);
