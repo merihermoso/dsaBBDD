@@ -29,9 +29,9 @@ description TEXT NOT NULL,
 content TEXT NOT NULL
 )ENGINE = InnoDB;
 
-INSERT INTO Map(name, description, price)  VALUES ('First Firefighter Adventure map' , 'This is the first Firefighter Adventure map description', '######'); 
-INSERT INTO Map(name, description, price)  VALUES ('Second Firefighter Adventure map', 'This is the second Firefighter Adventure map description', '######'); 
-INSERT INTO Map(name, description, price)  VALUES ('Third Firefighter Adventure map', 'This is the third Firefighter Adventure map description', '######');
+INSERT INTO Map(name, description, content)  VALUES ('First Firefighter Adventure map' , 'This is the first Firefighter Adventure map description', '######'); 
+INSERT INTO Map(name, description, content)  VALUES ('Second Firefighter Adventure map', 'This is the second Firefighter Adventure map description', '######'); 
+INSERT INTO Map(name, description, content)  VALUES ('Third Firefighter Adventure map', 'This is the third Firefighter Adventure map description', '######');
 
 
 
