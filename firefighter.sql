@@ -37,8 +37,8 @@ INSERT INTO Map(name, description, content)  VALUES ('Third Firefighter Adventur
 
 CREATE TABLE Game
 ( id  INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL, 
-userID INTEGER,
-mapID INTEGER,
+id_user INTEGER,
+id_map INTEGER,
 dateStart TEXT NOT NULL,
 timeStart TEXT NOT NULL,
 dateEnd TEXT, 
@@ -50,18 +50,18 @@ damage INTEGER,
 defense INTEGER,
 healing INTEGER,
 speed INTEGER,
-FOREIGN KEY (userID) REFERENCES User (id) ON DELETE CASCADE,
-FOREIGN KEY (mapID) REFERENCES Map (id) ON DELETE CASCADE
+FOREIGN KEY (id_user) REFERENCES User (id) ON DELETE CASCADE,
+FOREIGN KEY (id_map) REFERENCES Map (id) ON DELETE CASCADE
 )ENGINE = InnoDB;
 
-INSERT INTO Game(userID, mapID, dateStart, timeStart, dateEnd, timeEnd, score, coins, health, damage, defense, healing, speed) VALUES (1, 1, '14/12/20','11:00','14/12/20','11:30', 600, 50, 1000, 0, 0, 0, 1); 
-INSERT INTO Game(userID, mapID, dateStart, timeStart, dateEnd, timeEnd, score, coins, health, damage, defense, healing, speed) VALUES (1, 3, '15/12/20','4:00','15/12/20','4:45', 300, 20, 1000, 0, 0, 0, 1);
-INSERT INTO Game(userID, mapID, dateStart, timeStart, dateEnd, timeEnd, score, coins, health, damage, defense, healing, speed) VALUES (2, 1, '14/12/20','21:00','14/12/20','22:00', 500, 30, 1000, 0, 0, 0, 1);
-INSERT INTO Game(userID, mapID, dateStart, timeStart, dateEnd, timeEnd, score, coins, health, damage, defense, healing, speed) VALUES (2, 2, '14/12/20','22:00','14/12/20','23:30', 700, 25, 1000, 0, 0, 0, 1);
-INSERT INTO Game(userID, mapID, dateStart, timeStart, dateEnd, timeEnd, score, coins, health, damage, defense, healing, speed) VALUES (3, 1, '14/12/20','6:00','14/12/20','9:00', 100, 10, 1000, 0, 0, 0, 1);
-INSERT INTO Game(userID, mapID, dateStart, timeStart, dateEnd, timeEnd, score, coins, health, damage, defense, healing, speed) VALUES (3, 2, '14/12/20','9:00','14/12/20','19:00', 200, 7, 1000, 0, 0, 0, 1);
-INSERT INTO Game(userID, mapID, dateStart, timeStart, dateEnd, timeEnd, score, coins, health, damage, defense, healing, speed) VALUES (4, 3, '15/12/20','15:00','15/12/20','19:00', 500, 90, 1000, 0, 0, 0, 1);
-INSERT INTO Game(userID, mapID, dateStart, timeStart, dateEnd, timeEnd, score, coins, health, damage, defense, healing, speed) VALUES (5, 1, '14/12/20','12:00','14/12/20','13:00', 600, 75, 1000, 0, 0, 0, 1);
+INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, score, coins, health, damage, defense, healing, speed) VALUES (1, 1, '14/12/20','11:00','14/12/20','11:30', 600, 50, 1000, 0, 0, 0, 1); 
+INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, score, coins, health, damage, defense, healing, speed) VALUES (1, 3, '15/12/20','4:00','15/12/20','4:45', 300, 20, 1000, 0, 0, 0, 1);
+INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, score, coins, health, damage, defense, healing, speed) VALUES (2, 1, '14/12/20','21:00','14/12/20','22:00', 500, 30, 1000, 0, 0, 0, 1);
+INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, score, coins, health, damage, defense, healing, speed) VALUES (2, 2, '14/12/20','22:00','14/12/20','23:30', 700, 25, 1000, 0, 0, 0, 1);
+INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, score, coins, health, damage, defense, healing, speed) VALUES (3, 1, '14/12/20','6:00','14/12/20','9:00', 100, 10, 1000, 0, 0, 0, 1);
+INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, score, coins, health, damage, defense, healing, speed) VALUES (3, 2, '14/12/20','9:00','14/12/20','19:00', 200, 7, 1000, 0, 0, 0, 1);
+INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, score, coins, health, damage, defense, healing, speed) VALUES (4, 3, '15/12/20','15:00','15/12/20','19:00', 500, 90, 1000, 0, 0, 0, 1);
+INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, score, coins, health, damage, defense, healing, speed) VALUES (5, 1, '14/12/20','12:00','14/12/20','13:00', 600, 75, 1000, 0, 0, 0, 1);
 
 
 
@@ -87,10 +87,10 @@ INSERT INTO Item(name, price, description, image)  VALUES ('Hacha', 1, 'Abrete p
 
 
 CREATE TABLE Orders
-(userID INTEGER,
+(id_user INTEGER,
  itemID INTEGER,
  quantity INTEGER,
- FOREIGN KEY (userID) REFERENCES User (id) ON DELETE CASCADE,
+ FOREIGN KEY (id_user) REFERENCES User (id) ON DELETE CASCADE,
  FOREIGN KEY (itemID) REFERENCES Item (id) ON DELETE CASCADE
 ) ENGINE = InnoDB;
 
@@ -102,10 +102,10 @@ INSERT INTO Orders VALUES (2, 2, 24);
 
 
 CREATE TABLE Inventory 
-(gameID INTEGER,
+(id_game INTEGER,
  itemID INTEGER,
  quantity INTEGER,
- FOREIGN KEY (gameID) REFERENCES Game (id) ON DELETE CASCADE,
+ FOREIGN KEY (id_game) REFERENCES Game (id) ON DELETE CASCADE,
  FOREIGN KEY (itemID) REFERENCES Item (id) ON DELETE CASCADE
 ) ENGINE = InnoDB;
 
