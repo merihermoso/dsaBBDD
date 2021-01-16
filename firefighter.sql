@@ -87,32 +87,36 @@ INSERT INTO Item(name, price, description, image)  VALUES ('Hacha', 1, 'Abrete p
 
 
 CREATE TABLE Orders
-(id_user INTEGER,
+(id  INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL, 
+ id_user INTEGER,
  id_item INTEGER,
  quantity INTEGER,
+ orderDate TEXT NOT NULL,
+ orderTime TEXT NOT NULL,
  FOREIGN KEY (id_user) REFERENCES User (id) ON DELETE CASCADE,
  FOREIGN KEY (id_item) REFERENCES Item (id) ON DELETE CASCADE
 ) ENGINE = InnoDB;
 
-INSERT INTO Orders VALUES (1, 1, 8); 
-INSERT INTO Orders VALUES (1, 2, 5);
-INSERT INTO Orders VALUES (2, 1, 3);
-INSERT INTO Orders VALUES (2, 2, 24);
+INSERT INTO Orders(id_user, id_item, quantity, orderDate, orderTime) VALUES (1, 1, 8, '27/12/2020', '16:35'); 
+INSERT INTO Orders(id_user, id_item, quantity, orderDate, orderTime)  VALUES (1, 2, 5, '22/10/2020', '13:21'); 
+INSERT INTO Orders(id_user, id_item, quantity, orderDate, orderTime)  VALUES (2, 1, 3, '1/8/2020', '14:57'); 
+INSERT INTO Orders(id_user, id_item, quantity, orderDate, orderTime)  VALUES (2, 2, 24, '7/9/2019', '15:02'); 
 
 
 
 CREATE TABLE Inventory 
-(id_game INTEGER,
+(id  INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL, 
+ id_game INTEGER,
  id_item INTEGER,
  quantity INTEGER,
  FOREIGN KEY (id_game) REFERENCES Game (id) ON DELETE CASCADE,
  FOREIGN KEY (id_item) REFERENCES Item (id) ON DELETE CASCADE
 ) ENGINE = InnoDB;
 
-INSERT INTO Inventory VALUES (1, 1, 8); 
-INSERT INTO Inventory VALUES (1, 2, 5);
-INSERT INTO Inventory VALUES (2, 1, 3);
-INSERT INTO Inventory VALUES (2, 2, 24);
+INSERT INTO Inventory(id_game, id_item, quantity) VALUES (1, 1, 8); 
+INSERT INTO Inventory(id_game, id_item, quantity) VALUES (1, 2, 5);
+INSERT INTO Inventory(id_game, id_item, quantity) VALUES (2, 1, 3);
+INSERT INTO Inventory(id_game, id_item, quantity) VALUES (2, 2, 24);
 
 
 CREATE TABLE Enemy
