@@ -88,10 +88,10 @@ INSERT INTO Item(name, price, description, image)  VALUES ('Hacha', 1, 'Abrete p
 
 CREATE TABLE Orders
 (id_user INTEGER,
- itemID INTEGER,
+ id_item INTEGER,
  quantity INTEGER,
  FOREIGN KEY (id_user) REFERENCES User (id) ON DELETE CASCADE,
- FOREIGN KEY (itemID) REFERENCES Item (id) ON DELETE CASCADE
+ FOREIGN KEY (id_item) REFERENCES Item (id) ON DELETE CASCADE
 ) ENGINE = InnoDB;
 
 INSERT INTO Orders VALUES (1, 1, 8); 
@@ -103,10 +103,10 @@ INSERT INTO Orders VALUES (2, 2, 24);
 
 CREATE TABLE Inventory 
 (id_game INTEGER,
- itemID INTEGER,
+ id_item INTEGER,
  quantity INTEGER,
  FOREIGN KEY (id_game) REFERENCES Game (id) ON DELETE CASCADE,
- FOREIGN KEY (itemID) REFERENCES Item (id) ON DELETE CASCADE
+ FOREIGN KEY (id_item) REFERENCES Item (id) ON DELETE CASCADE
 ) ENGINE = InnoDB;
 
 INSERT INTO Inventory VALUES (1, 1, 8); 
