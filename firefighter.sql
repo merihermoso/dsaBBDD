@@ -21,6 +21,20 @@ INSERT INTO User(username, email, password, birthdate, score)  VALUES ('Sol7','s
 INSERT INTO User(username, email, password, birthdate, score)  VALUES ('Kei8','kei@gmail.com','774bc10a35da95c446b8a6f156f47d93cfddeb35282d89b115a6cc25518ac9b2', '23/06/1988', 15000); 
 
 
+
+CREATE TABLE Map
+( id  INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL, 
+name TEXT NOT NULL,
+description TEXT NOT NULL,
+content TEXT NOT NULL
+)ENGINE = InnoDB;
+
+INSERT INTO Map(name, description, price)  VALUES ('First Firefighter Adventure map' , 'This is the first Firefighter Adventure map description', '######'); 
+INSERT INTO Map(name, description, price)  VALUES ('Second Firefighter Adventure map', 'This is the second Firefighter Adventure map description', '######'); 
+INSERT INTO Map(name, description, price)  VALUES ('Third Firefighter Adventure map', 'This is the third Firefighter Adventure map description', '######');
+
+
+
 CREATE TABLE Game
 ( id  INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL, 
 id_user INTEGER,
@@ -98,15 +112,3 @@ INSERT INTO Enemy(name, max_health, damage) VALUES ('Enemy1', 1000, 1, 50);
 INSERT INTO Enemy(name, max_health, damage) VALUES ('Enemy2', 2000, 2, 100); 
 INSERT INTO Enemy(name, max_health, damage) VALUES ('Enemy3', 3000, 4, 150); 
 INSERT INTO Enemy(name, max_health, damage) VALUES ('Enemy4', 4000, 6, 200);
-
-
-CREATE TABLE Map
-( id  INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL, 
-name TEXT NOT NULL,
-description TEXT NOT NULL,
-content TEXT NOT NULL
-)ENGINE = InnoDB;
-
-INSERT INTO Map(name, description, price)  VALUES ('First Firefighter Adventure map' , 'This is the first Firefighter Adventure map description', '######'); 
-INSERT INTO Map(name, description, price)  VALUES ('Second Firefighter Adventure map', 'This is the second Firefighter Adventure map description', '######'); 
-INSERT INTO Map(name, description, price)  VALUES ('Third Firefighter Adventure map', 'This is the third Firefighter Adventure map description', '######');
