@@ -36,6 +36,20 @@ INSERT INTO UserSettings(username_min_length, username_max_length, password_min_
 
 
 
+CREATE TABLE GameSettings
+( id  INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL, 
+	min_health INTEGER,
+	max_health INTEGER,
+	max_damage INTEGER,
+	max_defense INTEGER,
+	max_healing INTEGER,
+	max_speed INTEGER
+)ENGINE = InnoDB;
+
+INSERT INTO GameSettings(min_health, max_health, max_damage, max_defense, max_healing, max_speed) VALUES (1000, 5000, 40, 40, 40, 40); 
+
+
+
 CREATE TABLE Map
 ( id  INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL, 
 name TEXT NOT NULL,
