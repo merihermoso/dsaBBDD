@@ -21,6 +21,20 @@ INSERT INTO User(username, email, password, birthdate, score) VALUES ('Sol7','so
 INSERT INTO User(username, email, password, birthdate, score) VALUES ('Kei8','kei@gmail.com','774bc10a35da95c446b8a6f156f47d93cfddeb35282d89b115a6cc25518ac9b2', '23/06/1988', 15000); 
 
 
+CREATE TABLE UserSettings
+( id  INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL, 
+	username_min_length INTEGER,
+	username_max_length INTEGER,
+	password_min_length INTEGER,
+	password_max_length INTEGER,
+	email_min_length INTEGER,
+	email_max_length INTEGER,
+	min_age INTEGER
+)ENGINE = InnoDB;
+
+INSERT INTO User(username_min_length, username_max_length, password_min_length, password_max_length, email_min_length, email_max_length, min_age) VALUES (4, 20, 4, 20, 4, 30, 15); 
+
+
 
 CREATE TABLE Map
 ( id  INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL, 
