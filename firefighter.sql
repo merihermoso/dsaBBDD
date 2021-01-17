@@ -57,6 +57,8 @@ dateStart TEXT NOT NULL,
 timeStart TEXT NOT NULL,
 dateEnd TEXT, 
 timeEnd TEXT,
+dateLast TEXT NOT NULL,
+timeLast TEXT NOT NULL,
 score INTEGER,
 coins INTEGER,
 health INTEGER,
@@ -70,14 +72,14 @@ FOREIGN KEY (id_user) REFERENCES User (id) ON DELETE CASCADE,
 FOREIGN KEY (id_map) REFERENCES Map (id) ON DELETE CASCADE
 )ENGINE = InnoDB;
 
-INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, score, coins, health, damage, defense, healing, speed, x, y) VALUES (1, 1, '14/12/20','11:00','14/12/20','11:30', 600, 50, 1000, 0, 0, 0, 1, 50, 50); 
-INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, score, coins, health, damage, defense, healing, speed, x, y) VALUES (1, 3, '15/12/20','4:00','15/12/20','4:45', 300, 20, 1000, 0, 0, 0, 1, 50, 50);
-INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, score, coins, health, damage, defense, healing, speed, x, y) VALUES (2, 1, '14/12/20','21:00','14/12/20','22:00', 500, 30, 1000, 0, 0, 0, 1, 50, 50);
-INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, score, coins, health, damage, defense, healing, speed, x, y) VALUES (2, 2, '14/12/20','22:00','14/12/20','23:30', 700, 25, 1000, 0, 0, 0, 1, 50, 50);
-INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, score, coins, health, damage, defense, healing, speed, x, y) VALUES (3, 1, '14/12/20','6:00','14/12/20','9:00', 100, 10, 1000, 0, 0, 0, 1, 50, 50);
-INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, score, coins, health, damage, defense, healing, speed, x, y) VALUES (3, 2, '14/12/20','9:00','14/12/20','19:00', 200, 7, 1000, 0, 0, 0, 1, 50, 50);
-INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, score, coins, health, damage, defense, healing, speed, x, y) VALUES (4, 3, '15/12/20','15:00','15/12/20','19:00', 500, 90, 1000, 0, 0, 0, 1, 50, 50);
-INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, score, coins, health, damage, defense, healing, speed, x, y) VALUES (5, 1, '14/12/20','12:00','14/12/20','13:00', 600, 75, 1000, 0, 0, 0, 1, 50, 50);
+INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, dateLast, timeLast, score, coins, health, damage, defense, healing, speed, x, y) VALUES (1, 1, '14/12/20', '11:00', '14/12/20', '11:30', '11/01/2021', '11:30', 600, 50, 1000, 0, 0, 0, 1, 50, 50); 
+INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, dateLast, timeLast, score, coins, health, damage, defense, healing, speed, x, y) VALUES (1, 3, '15/12/20', '4:00', '15/12/20', '4:45', '11/01/2021', '11:30', 300, 20, 1000, 0, 0, 0, 1, 50, 50);
+INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, dateLast, timeLast, score, coins, health, damage, defense, healing, speed, x, y) VALUES (2, 1, '14/12/20', '21:00', '14/12/20', '22:00', '11/01/2021', '11:30', 500, 30, 1000, 0, 0, 0, 1, 50, 50);
+INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, dateLast, timeLast, score, coins, health, damage, defense, healing, speed, x, y) VALUES (2, 2, '14/12/20', '22:00', '14/12/20', '23:30', '11/01/2021', '11:30', 700, 25, 1000, 0, 0, 0, 1, 50, 50);
+INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, dateLast, timeLast, score, coins, health, damage, defense, healing, speed, x, y) VALUES (3, 1, '14/12/20', '6:00', '14/12/20', '9:00', '11/01/2021', '11:30', 100, 10, 1000, 0, 0, 0, 1, 50, 50);
+INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, dateLast, timeLast, score, coins, health, damage, defense, healing, speed, x, y) VALUES (3, 2, '14/12/20', '9:00', '14/12/20', '19:00', '11/01/2021', '11:30', 200, 7, 1000, 0, 0, 0, 1, 50, 50);
+INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, dateLast, timeLast, score, coins, health, damage, defense, healing, speed, x, y) VALUES (4, 3, '15/12/20', '15:00', '15/12/20', '19:00', '11/01/2021', '11:30', 500, 90, 1000, 0, 0, 0, 1, 50, 50);
+INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, dateLast, timeLast, score, coins, health, damage, defense, healing, speed, x, y) VALUES (5, 1, '14/12/20', '12:00', '14/12/20', '13:00', '11/01/2021', '11:30', 600, 75, 1000, 0, 0, 0, 1, 50, 50);
 
 
 
