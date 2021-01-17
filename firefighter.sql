@@ -32,7 +32,7 @@ CREATE TABLE UserSettings
 	min_age INTEGER
 )ENGINE = InnoDB;
 
-INSERT INTO User(username_min_length, username_max_length, password_min_length, password_max_length, email_min_length, email_max_length, min_age) VALUES (4, 20, 4, 20, 4, 30, 15); 
+INSERT INTO UserSettings(username_min_length, username_max_length, password_min_length, password_max_length, email_min_length, email_max_length, min_age) VALUES (4, 20, 4, 20, 4, 30, 15); 
 
 
 
