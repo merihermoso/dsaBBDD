@@ -145,8 +145,8 @@ CREATE TABLE GameEntity
  FOREIGN KEY (id_entity) REFERENCES Entity (id) ON DELETE CASCADE
 ) ENGINE = InnoDB;
 
-INSERT INTO Inventory(id_game, id_item, x, y) VALUES (1, 1, 0, 0); 
-INSERT INTO Inventory(id_game, id_item, x, y) VALUES (1, 2, 50, 100);
-INSERT INTO Inventory(id_game, id_item, x, y) VALUES (2, 1, 70, 35);
-INSERT INTO Inventory(id_game, id_item, x, y) VALUES (2, 2, 100, 0);
+INSERT INTO Inventory(id_game, id_entity, x, y) VALUES (1, 1, 0, 0); 
+INSERT INTO Inventory(id_game, id_entity, x, y) VALUES (1, 2, 50, 100);
+INSERT INTO Inventory(id_game, id_entity, x, y) VALUES (2, 1, 70, 35);
+INSERT INTO Inventory(id_game, id_entity, x, y) VALUES (2, 2, 100, 0);
 
