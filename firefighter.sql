@@ -111,15 +111,15 @@ image TEXT NOT NULL
 )ENGINE = InnoDB;
 
 
-INSERT INTO Item(name, price, description, image)  VALUES ('Aloe vera', 1, 'Cura tus quemaduras','/media/1.png'); 
-INSERT INTO Item(name, price, description, image)  VALUES ('Venda', 2, 'Tapa tus quemaduras, si no las ves no estan','/media/venda.png'); 
-INSERT INTO Item(name, price, description, image)  VALUES ('Agua', 3, 'Se puede beber','/media/agua.png'); 
-INSERT INTO Item(name, price, description, image)  VALUES ('Escudo', 1, 'Te protege de los ataques','/media/escudo.png'); 
-INSERT INTO Item(name, price, description, image)  VALUES ('Mascara', 2, 'No te quemaras la cara','/media/5.png'); 
-INSERT INTO Item(name, price, description, image)  VALUES ('Pastilla magica', 3, 'Misteriosamente te hace sentir mejor','/media/6.png'); 
-INSERT INTO Item(name, price, description, image)  VALUES ('Extintor', 4, 'Apaga el mal','/media/extintor.png'); 
-INSERT INTO Item(name, price, description, image)  VALUES ('Manguera', 1, 'Tira agua','/media/mangera.png'); 
-INSERT INTO Item(name, price, description, image)  VALUES ('Hacha', 1, 'Abrete paso por las malas','/media/2.png'); 
+INSERT INTO Item(name, price, description, image)  VALUES ('Aloe vera', 1, 'Cura tus quemaduras','/Media/1.png'); 
+INSERT INTO Item(name, price, description, image)  VALUES ('Venda', 2, 'Tapa tus quemaduras, si no las ves no estan','/Media/venda.png'); 
+INSERT INTO Item(name, price, description, image)  VALUES ('Agua', 3, 'Se puede beber','/Media/agua.png'); 
+INSERT INTO Item(name, price, description, image)  VALUES ('Escudo', 1, 'Te protege de los ataques','/Media/escudo.png'); 
+INSERT INTO Item(name, price, description, image)  VALUES ('Mascara', 2, 'No te quemaras la cara','/Media/5.png'); 
+INSERT INTO Item(name, price, description, image)  VALUES ('Pastilla magica', 3, 'Misteriosamente te hace sentir mejor','/Media/6.png'); 
+INSERT INTO Item(name, price, description, image)  VALUES ('Extintor', 4, 'Apaga el mal','/Media/extintor.png'); 
+INSERT INTO Item(name, price, description, image)  VALUES ('Manguera', 1, 'Tira agua','/Media/mangera.png'); 
+INSERT INTO Item(name, price, description, image)  VALUES ('Hacha', 1, 'Abrete paso por las malas','/Media/2.png'); 
 
 
 
