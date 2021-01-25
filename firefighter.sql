@@ -8,17 +8,18 @@ username TEXT NOT NULL,
 email TEXT NOT NULL, 
 password TEXT NOT NULL, 
 birthdate TEXT NOT NULL,
+profile_photo TEXT NOT NULL,
 score INTEGER
 )ENGINE = InnoDB;
 
-INSERT INTO User(username, email, password, birthdate, score) VALUES ('Marta1','marta@gmail.com','9cb217e14b3f01505c764b0c440e5db7a4cf8458f13204cd0593055908fca9fc', '27/12/2000', 1500); 
-INSERT INTO User(username, email, password, birthdate, score) VALUES ('Cacatua2','cacatua@gmail.com','dfe2dca2fab705b346041671e7317a90e456392ec74ad51eda726ed94f92a845', '27/02/1998', 1000);
-INSERT INTO User(username, email, password, birthdate, score) VALUES ('Montse3','montse@gmail.com','73c9bd4f3552517488af0880fbff656c6109e90e95fbcc9846653ebcb2c857ab', '27/12/1997', 2000); 
-INSERT INTO User(username, email, password, birthdate, score) VALUES ('Pere4','pere@gmail.com','e467c91d5d40934f1ee207814faa375b57e70ce5a2e6a06ddb391312618e925f', '27/12/1995', 3000); 
-INSERT INTO User(username, email, password, birthdate, score) VALUES ('Alex5','alex@gmail.com','5a5b1147857716e6c81f37d115427a8d7e2951e606993e50d62d36dbd20e8d69', '27/02/1996', 5000);  
-INSERT INTO User(username, email, password, birthdate, score) VALUES ('Meri6','meri@gmail.com','adfd551d488505017a3f5d921d634de13390c95735eb9e847679ca458c57d126', '27/08/1999', 8000);  
-INSERT INTO User(username, email, password, birthdate, score) VALUES ('Sol7','sol@gmail.com','89e0a57deb5e7e483c35f15f28b019cfc998709819fc0bdaf79386a5e7be60c6', '27/10/1990', 200); 
-INSERT INTO User(username, email, password, birthdate, score) VALUES ('Kei8','kei@gmail.com','774bc10a35da95c446b8a6f156f47d93cfddeb35282d89b115a6cc25518ac9b2', '23/06/1988', 15000); 
+INSERT INTO User(username, email, password, birthdate, profile_photo, score) VALUES ('Marta1','marta@gmail.com','9cb217e14b3f01505c764b0c440e5db7a4cf8458f13204cd0593055908fca9fc', '27/12/2000', '/Media/profile.png', 1500); 
+INSERT INTO User(username, email, password, birthdate, profile_photo, score) VALUES ('Cacatua2','cacatua@gmail.com','dfe2dca2fab705b346041671e7317a90e456392ec74ad51eda726ed94f92a845', '27/02/1998', '/Media/profile.png', 1000);
+INSERT INTO User(username, email, password, birthdate, profile_photo, score) VALUES ('Montse3','montse@gmail.com','73c9bd4f3552517488af0880fbff656c6109e90e95fbcc9846653ebcb2c857ab', '27/12/1997', '/Media/profile.png', 2000); 
+INSERT INTO User(username, email, password, birthdate, profile_photo, score) VALUES ('Pere4','pere@gmail.com','e467c91d5d40934f1ee207814faa375b57e70ce5a2e6a06ddb391312618e925f', '27/12/1995', '/Media/profile.png', 3000); 
+INSERT INTO User(username, email, password, birthdate, profile_photo, score) VALUES ('Alex5','alex@gmail.com','5a5b1147857716e6c81f37d115427a8d7e2951e606993e50d62d36dbd20e8d69', '27/02/1996', '/Media/profile.png', 5000);  
+INSERT INTO User(username, email, password, birthdate, profile_photo, score) VALUES ('Meri6','meri@gmail.com','adfd551d488505017a3f5d921d634de13390c95735eb9e847679ca458c57d126', '27/08/1999', '/Media/profile.png', 8000);  
+INSERT INTO User(username, email, password, birthdate, profile_photo, score) VALUES ('Sol7','sol@gmail.com','89e0a57deb5e7e483c35f15f28b019cfc998709819fc0bdaf79386a5e7be60c6', '27/10/1990', '/Media/profile.png', 200); 
+INSERT INTO User(username, email, password, birthdate, profile_photo, score) VALUES ('Kei8','kei@gmail.com','774bc10a35da95c446b8a6f156f47d93cfddeb35282d89b115a6cc25518ac9b2', '23/06/1988', '/Media/profile.png', 15000); 
 
 
 CREATE TABLE UserSettings
