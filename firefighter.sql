@@ -130,6 +130,7 @@ CREATE TABLE Orders
  id_item INTEGER,
  orderDate TEXT NOT NULL,
  orderTime TEXT NOT NULL,
+ quantity INTEGER,
  FOREIGN KEY (id_user) REFERENCES User (id) ON DELETE CASCADE,
  FOREIGN KEY (id_item) REFERENCES Item (id) ON DELETE CASCADE
 ) ENGINE = InnoDB;
