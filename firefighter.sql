@@ -128,17 +128,16 @@ CREATE TABLE Orders
 (id  INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL, 
  id_user INTEGER,
  id_item INTEGER,
- quantity INTEGER,
  orderDate TEXT NOT NULL,
  orderTime TEXT NOT NULL,
  FOREIGN KEY (id_user) REFERENCES User (id) ON DELETE CASCADE,
  FOREIGN KEY (id_item) REFERENCES Item (id) ON DELETE CASCADE
 ) ENGINE = InnoDB;
 
-INSERT INTO Orders(id_user, id_item, quantity, orderDate, orderTime) VALUES (4, 1, 8, '27/12/2020', '16:35'); 
-INSERT INTO Orders(id_user, id_item, quantity, orderDate, orderTime)  VALUES (4, 2, 5, '22/10/2020', '13:21'); 
-INSERT INTO Orders(id_user, id_item, quantity, orderDate, orderTime)  VALUES (4, 1, 3, '1/8/2020', '14:57'); 
-INSERT INTO Orders(id_user, id_item, quantity, orderDate, orderTime)  VALUES (4, 2, 24, '7/9/2019', '15:02'); 
+INSERT INTO Orders(id_user, id_item, orderDate, orderTime) VALUES (4, 1, '27/12/2020', '16:35'); 
+INSERT INTO Orders(id_user, id_item, orderDate, orderTime) VALUES (4, 2, '22/10/2020', '13:21'); 
+INSERT INTO Orders(id_user, id_item, orderDate, orderTime) VALUES (4, 1, '1/8/2020', '14:57'); 
+INSERT INTO Orders(id_user, id_item, orderDate, orderTime) VALUES (4, 2, '7/9/2019', '15:02'); 
 
 
 
