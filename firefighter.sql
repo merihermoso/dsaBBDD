@@ -145,15 +145,14 @@ CREATE TABLE Inventory
 (id  INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL, 
  id_game INTEGER,
  id_item INTEGER,
- quantity INTEGER,
  FOREIGN KEY (id_game) REFERENCES Game (id) ON DELETE CASCADE,
  FOREIGN KEY (id_item) REFERENCES Item (id) ON DELETE CASCADE
 ) ENGINE = InnoDB;
 
-INSERT INTO Inventory(id_game, id_item, quantity) VALUES (1, 1, 8); 
-INSERT INTO Inventory(id_game, id_item, quantity) VALUES (1, 2, 5);
-INSERT INTO Inventory(id_game, id_item, quantity) VALUES (2, 1, 3);
-INSERT INTO Inventory(id_game, id_item, quantity) VALUES (2, 2, 24);
+INSERT INTO Inventory(id_game, id_item) VALUES (1, 1); 
+INSERT INTO Inventory(id_game, id_item) VALUES (1, 2);
+INSERT INTO Inventory(id_game, id_item) VALUES (2, 1);
+INSERT INTO Inventory(id_game, id_item) VALUES (2, 2);
 
 
 CREATE TABLE Entity
