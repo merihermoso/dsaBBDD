@@ -134,10 +134,10 @@ CREATE TABLE Orders
  FOREIGN KEY (id_item) REFERENCES Item (id) ON DELETE CASCADE
 ) ENGINE = InnoDB;
 
-INSERT INTO Orders(id_user, id_item, orderDate, orderTime) VALUES (4, 1, '27/12/2020', '16:35'); 
-INSERT INTO Orders(id_user, id_item, orderDate, orderTime) VALUES (4, 2, '22/10/2020', '13:21'); 
-INSERT INTO Orders(id_user, id_item, orderDate, orderTime) VALUES (4, 1, '1/8/2020', '14:57'); 
-INSERT INTO Orders(id_user, id_item, orderDate, orderTime) VALUES (4, 2, '7/9/2019', '15:02'); 
+INSERT INTO Orders(id_user, id_item, orderDate, orderTime, quantity) VALUES (4, 1, '27/12/2020', '16:35', 1); 
+INSERT INTO Orders(id_user, id_item, orderDate, orderTime, quantity) VALUES (4, 2, '22/10/2020', '13:21', 1); 
+INSERT INTO Orders(id_user, id_item, orderDate, orderTime, quantity) VALUES (4, 1, '1/8/2020', '14:57', 1); 
+INSERT INTO Orders(id_user, id_item, orderDate, orderTime, quantity) VALUES (4, 2, '7/9/2019', '15:02', 1); 
 
 
 
@@ -145,14 +145,15 @@ CREATE TABLE Inventory
 (id  INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL, 
  id_game INTEGER,
  id_item INTEGER,
+ quantity INTEGER,
  FOREIGN KEY (id_game) REFERENCES Game (id) ON DELETE CASCADE,
  FOREIGN KEY (id_item) REFERENCES Item (id) ON DELETE CASCADE
 ) ENGINE = InnoDB;
 
-INSERT INTO Inventory(id_game, id_item) VALUES (1, 1); 
-INSERT INTO Inventory(id_game, id_item) VALUES (1, 2);
-INSERT INTO Inventory(id_game, id_item) VALUES (2, 1);
-INSERT INTO Inventory(id_game, id_item) VALUES (2, 2);
+INSERT INTO Inventory(id_game, id_item, quantity) VALUES (1, 1, 1); 
+INSERT INTO Inventory(id_game, id_item, quantity) VALUES (1, 2, 1);
+INSERT INTO Inventory(id_game, id_item, quantity) VALUES (2, 1, 1);
+INSERT INTO Inventory(id_game, id_item, quantity) VALUES (2, 2, 1);
 
 
 CREATE TABLE Entity
