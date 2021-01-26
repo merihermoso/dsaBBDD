@@ -87,20 +87,20 @@ FOREIGN KEY (id_user) REFERENCES User (id) ON DELETE CASCADE,
 FOREIGN KEY (id_map) REFERENCES Map (id) ON DELETE CASCADE
 )ENGINE = InnoDB;
 
-INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, dateLast, timeLast, score, coins, health, attack, defense, healing, speed, x, y) VALUES (1, 1, '14/12/2021', '11:00', '14/12/2021', '11:30', '11/01/2021', '11:30', 600, 50, 1000, 20, 30, 10, 35, 50, 50); 
-INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, dateLast, timeLast, score, coins, health, attack, defense, healing, speed, x, y) VALUES (1, 3, '15/12/2021', '4:00', '', '', '11/01/2021', '11:30', 300, 20, 1000, 20, 30, 10, 35, 50, 50);
-INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, dateLast, timeLast, score, coins, health, attack, defense, healing, speed, x, y) VALUES (2, 1, '14/12/2021', '21:00', '14/12/2021', '22:00', '11/01/2021', '11:30', 500, 30, 1000, 0, 0, 0, 1, 50, 50);
-INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, dateLast, timeLast, score, coins, health, attack, defense, healing, speed, x, y) VALUES (2, 2, '14/12/2021', '22:00', '', '', '11/01/2021', '11:30', 700, 25, 1000, 20, 30, 10, 35, 50, 50);
-INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, dateLast, timeLast, score, coins, health, attack, defense, healing, speed, x, y) VALUES (3, 1, '14/12/2021', '6:00', '', '', '11/01/2021', '11:30', 100, 10, 1000, 20, 30, 10, 35, 50, 50);
-INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, dateLast, timeLast, score, coins, health, attack, defense, healing, speed, x, y) VALUES (3, 2, '14/12/2021', '9:00', '14/12/2021', '19:00', '11/01/2021', '11:30', 200, 7, 1000, 0, 0, 0, 1, 50, 50);
-INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, dateLast, timeLast, score, coins, health, attack, defense, healing, speed, x, y) VALUES (4, 3, '15/12/2021', '15:00', '15/12/2021', '19:00', '11/01/2021', '11:30', 500, 90, 1000, 0, 0, 0, 1, 50, 50);
-INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, dateLast, timeLast, score, coins, health, attack, defense, healing, speed, x, y) VALUES (5, 1, '14/12/2021', '12:00', '', '', '11/01/2021', '11:30', 600, 75, 1000, 0, 0, 0, 1, 50, 50);
-INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, dateLast, timeLast, score, coins, health, attack, defense, healing, speed, x, y) VALUES (4, 1, '14/12/2021', '11:00', '14/12/2021', '11:30', '11/01/2021', '11:30', 600, 50, 1000, 20, 30, 10, 35, 50, 50); 
-INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, dateLast, timeLast, score, coins, health, attack, defense, healing, speed, x, y) VALUES (4, 3, '15/12/2021', '4:00', '', '', '11/01/2021', '11:30', 300, 20, 1000, 40, 10, 5, 30, 50, 50);
-INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, dateLast, timeLast, score, coins, health, attack, defense, healing, speed, x, y) VALUES (4, 1, '14/12/2021', '21:00', '14/12/2021', '22:00', '11/01/2021', '11:30', 500, 30, 1000, 27, 39, 5, 0, 50, 50);
-INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, dateLast, timeLast, score, coins, health, attack, defense, healing, speed, x, y) VALUES (4, 2, '14/12/2021', '22:00', '', '', '11/01/2021', '11:30', 700, 25, 1000, 20, 30, 10, 35, 50, 50);
-INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, dateLast, timeLast, score, coins, health, attack, defense, healing, speed, x, y) VALUES (4, 1, '14/12/2021', '6:00', '', '', '11/01/2021', '11:30', 100, 10, 1000, 0, 31, 3, 24, 50, 50);
-INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, dateLast, timeLast, score, coins, health, attack, defense, healing, speed, x, y) VALUES (4, 2, '14/12/2021', '9:00', '14/12/2021', '19:00', '11/01/2021', '11:30', 200, 7, 1000, 20, 30, 10, 35, 50, 50);
+INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, dateLast, timeLast, score, coins, health, attack, defense, healing, speed, x, y) VALUES (1, 1, '14/12/2020', '11:00', '14/12/2020', '11:30', '11/01/2020', '11:30', 600, 50, 1000, 20, 30, 10, 35, 50, 50); 
+INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, dateLast, timeLast, score, coins, health, attack, defense, healing, speed, x, y) VALUES (1, 3, '15/12/2020', '4:00', '', '', '11/01/2020', '11:30', 300, 20, 1000, 20, 30, 10, 35, 50, 50);
+INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, dateLast, timeLast, score, coins, health, attack, defense, healing, speed, x, y) VALUES (2, 1, '14/12/2020', '21:00', '14/12/2020', '22:00', '11/01/2020', '11:30', 500, 30, 1000, 0, 0, 0, 1, 50, 50);
+INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, dateLast, timeLast, score, coins, health, attack, defense, healing, speed, x, y) VALUES (2, 2, '14/12/2020', '22:00', '', '', '11/01/2020', '11:30', 700, 25, 1000, 20, 30, 10, 35, 50, 50);
+INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, dateLast, timeLast, score, coins, health, attack, defense, healing, speed, x, y) VALUES (3, 1, '14/12/2020', '6:00', '', '', '11/01/2020', '11:30', 100, 10, 1000, 20, 30, 10, 35, 50, 50);
+INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, dateLast, timeLast, score, coins, health, attack, defense, healing, speed, x, y) VALUES (3, 2, '14/12/2020', '9:00', '14/12/2020', '19:00', '11/01/2020', '11:30', 200, 7, 1000, 0, 0, 0, 1, 50, 50);
+INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, dateLast, timeLast, score, coins, health, attack, defense, healing, speed, x, y) VALUES (4, 3, '15/12/2020', '15:00', '15/12/2020', '19:00', '11/01/2020', '11:30', 500, 90, 1000, 0, 0, 0, 1, 50, 50);
+INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, dateLast, timeLast, score, coins, health, attack, defense, healing, speed, x, y) VALUES (5, 1, '14/12/2020', '12:00', '', '', '11/01/2020', '11:30', 600, 75, 1000, 0, 0, 0, 1, 50, 50);
+INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, dateLast, timeLast, score, coins, health, attack, defense, healing, speed, x, y) VALUES (4, 1, '14/12/2020', '11:00', '14/12/2020', '11:30', '11/01/2020', '11:30', 600, 50, 1000, 20, 30, 10, 35, 50, 50); 
+INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, dateLast, timeLast, score, coins, health, attack, defense, healing, speed, x, y) VALUES (4, 3, '15/12/2020', '4:00', '', '', '11/01/2020', '11:30', 300, 20, 1000, 40, 10, 5, 30, 50, 50);
+INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, dateLast, timeLast, score, coins, health, attack, defense, healing, speed, x, y) VALUES (4, 1, '14/12/2020', '21:00', '14/12/2020', '22:00', '11/01/2020', '11:30', 500, 30, 1000, 27, 39, 5, 0, 50, 50);
+INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, dateLast, timeLast, score, coins, health, attack, defense, healing, speed, x, y) VALUES (4, 2, '14/12/2020', '22:00', '', '', '11/01/2020', '11:30', 700, 25, 1000, 20, 30, 10, 35, 50, 50);
+INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, dateLast, timeLast, score, coins, health, attack, defense, healing, speed, x, y) VALUES (4, 1, '14/12/2020', '6:00', '', '', '11/01/2020', '11:30', 100, 10, 1000, 0, 31, 3, 24, 50, 50);
+INSERT INTO Game(id_user, id_map, dateStart, timeStart, dateEnd, timeEnd, dateLast, timeLast, score, coins, health, attack, defense, healing, speed, x, y) VALUES (4, 2, '14/12/2020', '9:00', '14/12/2020', '19:00', '11/01/2020', '11:30', 200, 7, 1000, 20, 30, 10, 35, 50, 50);
 
 
 CREATE TABLE Item
@@ -135,10 +135,10 @@ CREATE TABLE Orders
  FOREIGN KEY (id_item) REFERENCES Item (id) ON DELETE CASCADE
 ) ENGINE = InnoDB;
 
-INSERT INTO Orders(id_user, id_item, quantity, orderDate, orderTime) VALUES (1, 1, 8, '27/12/2020', '16:35'); 
-INSERT INTO Orders(id_user, id_item, quantity, orderDate, orderTime)  VALUES (1, 2, 5, '22/10/2020', '13:21'); 
-INSERT INTO Orders(id_user, id_item, quantity, orderDate, orderTime)  VALUES (2, 1, 3, '1/8/2020', '14:57'); 
-INSERT INTO Orders(id_user, id_item, quantity, orderDate, orderTime)  VALUES (2, 2, 24, '7/9/2019', '15:02'); 
+INSERT INTO Orders(id_user, id_item, quantity, orderDate, orderTime) VALUES (4, 1, 8, '27/12/2020', '16:35'); 
+INSERT INTO Orders(id_user, id_item, quantity, orderDate, orderTime)  VALUES (4, 2, 5, '22/10/2020', '13:21'); 
+INSERT INTO Orders(id_user, id_item, quantity, orderDate, orderTime)  VALUES (4, 1, 3, '1/8/2020', '14:57'); 
+INSERT INTO Orders(id_user, id_item, quantity, orderDate, orderTime)  VALUES (4, 2, 24, '7/9/2019', '15:02'); 
 
 
 
